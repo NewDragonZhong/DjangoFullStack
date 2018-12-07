@@ -32,6 +32,7 @@ def email_report(filePath,emailCount,email_list,ePassword,authorEmail='zhongxinl
     # 创建一个带附件的实例
     message = MIMEMultipart()
     message['From'] = formataddr(["BBD测试部",'zhongxinlong@bbdservice.com'])
+    message['To'] = ','.join(email_list)
     subject = os.path.basename(filePath)
     message['Subject'] = subject
 

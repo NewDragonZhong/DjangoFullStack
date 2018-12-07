@@ -371,7 +371,7 @@ def modal_info(req):
         elif labelName == '测试结论:':
             report_obj.testConclusion = labelValue
         elif labelName == '发送给@:':
-            report_obj.emailList = labelValue
+            report_obj.emailList = labelValue.split(",")
     report_obj.save()
 
 

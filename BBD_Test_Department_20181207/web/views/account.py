@@ -289,15 +289,14 @@ def creat_report(req):
     u_nid = user_info['nid']
     u_name = user_info['username']
     ePassword = models.UserInfo.objects.get(nid=u_nid).password
+    headLine = req.POST.get('itemName')
+    cw = CreateWord(u_nid, headLine)
 
 
     global filePath
 
     rep.status = True
     if req.method == "POST":
-        headLine = req.POST.get('itemName')
-
-        cw = CreateWord(u_nid,headLine)
 
         try:
             filePath = cw.create_word() # 获取文档路径
@@ -312,7 +311,12 @@ def creat_report(req):
 
         obj_ri = models.ReportInfo.objects.get(user_info_id=u_nid)
         emailCount = obj_ri.emailContent
-        email_list = obj_ri.emailList
+        email_list = cw.buffer_func(obj_ri.emailList)
+
+        print('email_list:',email_list)
+        print('email_list_type:', type(email_list))
+
+
         authorEmail = '%s@bbdservice.com' % u_name
         rep.message = "报告发送成功！"
         rep.status = True
