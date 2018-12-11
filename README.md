@@ -1,5 +1,5 @@
 # PythonFullStack
-python
+python(版本 3.6.1)
 需要安装一些 依赖的包：
   -- import requests
   -- from lxml import etree
