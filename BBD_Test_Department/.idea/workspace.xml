@@ -54,13 +54,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="244">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
+        <entry file="file://$PROJECT_DIR$/templates/my_report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -68,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/home.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-464">
-              <caret line="278" column="56" lean-forward="true" selection-start-line="278" selection-start-column="56" selection-end-line="278" selection-end-column="56" />
+            <state relative-caret-position="558">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
                 <element signature="e#45#54#0" expanded="true" />
               </folding>
@@ -78,52 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/utils/mysql_bugInfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/utils/spider_bugInfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="86" selection-start-line="86" selection-end-line="87" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_spidertable">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="535" column="34" selection-start-line="535" selection-start-column="34" selection-end-line="535" selection-end-column="34" />
-              <folding>
-                <element signature="e#8943#9483#0#HTML" />
-                <element signature="e#10229#11114#0#HTML" />
-                <element signature="e#16860#17638#0#HTML" />
-                <element signature="e#17671#17832#0#HTML" />
-                <element signature="e#17891#19635#0#HTML" />
-                <element signature="e#19679#19874#0#HTML" />
-                <element signature="e#20247#21121#0#HTML" />
-                <element signature="e#20268#21110#0#HTML" />
-                <element signature="e#22159#23409#0#HTML" />
-                <element signature="e#23472#24477#0#HTML" />
-              </folding>
+            <state relative-caret-position="1584">
+              <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -131,17 +86,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="296" column="21" lean-forward="true" selection-start-line="296" selection-start-column="21" selection-end-line="296" selection-end-column="21" />
+            <state relative-caret-position="8892">
+              <caret line="494" column="10" selection-start-line="494" selection-start-column="1" selection-end-line="494" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+        <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="72" column="67" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="67" />
+            <state relative-caret-position="630">
+              <caret line="37" column="21" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="21" />
+              <folding>
+                <element signature="e#640#672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/small_talk.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1044">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+              <folding>
+                <element signature="e#1708#1732#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="957">
+              <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_userinfo">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -149,10 +137,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/account.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="285" column="60" selection-start-line="285" selection-start-column="60" selection-end-line="285" selection-end-column="60" />
+            <state relative-caret-position="4482">
+              <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3528">
+              <caret line="196" column="15" selection-start-line="196" selection-start-column="15" selection-end-line="196" selection-end-column="15" />
+              <folding>
+                <element signature="n#if#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -163,29 +163,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>filePath</find>
-      <find>.form-group-submit</find>
-      <find>modal-add-info-btn</find>
-      <find>去掉</find>
-      <find>ths</find>
-      <find>modal-btn-confir</find>
-      <find>form-group-div</find>
-      <find>form-group</find>
-      <find>btn-info</find>
-      <find>modal-del-info-btn</find>
-      <find>publish-btn2</find>
-      <find>news-pic</find>
-      <find>注册</find>
-      <find>login_link_a</find>
-      <find>SubmitLogin</find>
-      <find>登录</find>
       <find>user-opr-box</find>
       <find>userOprBox</find>
       <find>邮件内容:</find>
@@ -197,9 +181,25 @@
       <find>zentao</find>
       <find>modal-btn-zentao</find>
       <find>update</find>
-      <find>accountDialog</find>
-      <find>modal-dialog-custom</find>
       <find>btn-old-zentao</find>
+      <find>modal-dialog-custom</find>
+      <find>btn-info</find>
+      <find>accountDialog</find>
+      <find>act-menu</find>
+      <find>tb</find>
+      <find>siblings</find>
+      <find>news-type</find>
+      <find>find</find>
+      <find>small_talk</find>
+      <find>news_list</find>
+      <find>radio</find>
+      <find>huifu-top-box</find>
+      <find>comment-box-top</find>
+      <find>loading-ico</find>
+      <find>加载</find>
+      <find>news-pic</find>
+      <find>邮箱地址</find>
+      <find>null-item</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -227,28 +227,30 @@
         <option value="$PROJECT_DIR$/backend/utils/create_word.py" />
         <option value="$PROJECT_DIR$/templates/index_tr.html" />
         <option value="$PROJECT_DIR$/change_chouti/urls.py" />
-        <option value="$PROJECT_DIR$/templates/small_talk.html" />
-        <option value="$PROJECT_DIR$/templates/_layout.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/backend/utils/message.py" />
         <option value="$PROJECT_DIR$/web/views/home.py" />
         <option value="$PROJECT_DIR$/backend/utils/mysql_bugInfo.py" />
-        <option value="$PROJECT_DIR$/web/views/account.py" />
         <option value="$PROJECT_DIR$/statics/css/commons.css" />
+        <option value="$PROJECT_DIR$/web/views/account.py" />
+        <option value="$PROJECT_DIR$/templates/my_report.html" />
+        <option value="$PROJECT_DIR$/templates/_layout.html" />
+        <option value="$PROJECT_DIR$/templates/small_talk.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="width" value="1654" />
-    <option name="height" value="1002" />
+    <option name="x" value="1" />
+    <option name="width" value="1652" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,7 +283,7 @@
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
               <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
               <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
@@ -309,7 +311,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,6 +321,11 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\BBD_Test_Department\statics\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -510,12 +516,14 @@
       <workItem from="1543829327902" duration="46589000" />
       <workItem from="1544063494137" duration="25919000" />
       <workItem from="1544152382407" duration="7757000" />
-      <workItem from="1544405525423" duration="21121000" />
+      <workItem from="1544405525423" duration="51906000" />
+      <workItem from="1544836007911" duration="25475000" />
+      <workItem from="1545096608585" duration="46000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206013000" />
+    <option name="totallyTimeSpent" value="262319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,10 +535,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="0" width="1654" height="1002" extended-state="0" />
+    <frame x="1" y="0" width="1652" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" order="0" visible="true" weight="0.14930992" />
+      <window_info id="Project" order="0" visible="true" weight="0.12311558" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49937966" weight="0.32873562" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.328341" />
+      <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.2062212" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32882413" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21035169" side_tool="true" weight="0.24367817" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="bottom" id="找到" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" weight="0.3295711" />
+      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49937966" weight="0.3295711" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17085427" />
+      <window_info anchor="right" id="数据库" order="5" visible="true" weight="0.1945629" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.32982457" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.1218593" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -542,9 +579,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32844242" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7902098" visible="true" weight="0.24367817" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.2062212" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32882413" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.20979021" side_tool="true" weight="0.1970046" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21035169" side_tool="true" weight="0.24367817" />
       <window_info anchor="bottom" id="调试" order="12" />
       <window_info anchor="bottom" id="找到" order="13" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -554,51 +591,15 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="4" weight="0.20326224" />
+      <window_info anchor="right" id="Database" order="4" weight="0.13157895" />
       <window_info anchor="right" id="数据库" order="5" visible="true" weight="0.1945629" />
-      <window_info anchor="right" id="SciView" order="6" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.15806045" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49937966" weight="0.32906976" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32844242" />
-      <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7902098" weight="0.20403588" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32882413" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.20979021" side_tool="true" weight="0.1970046" />
-      <window_info anchor="bottom" id="调试" order="12" />
-      <window_info anchor="bottom" id="找到" order="13" />
-      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" weight="0.3295711" />
-      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49937966" weight="0.3295711" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="4" weight="0.042191435" />
-      <window_info anchor="right" id="数据库" order="5" visible="true" weight="0.1945629" />
-      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.32982457" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/forms/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/11111.html" />
     <entry file="file://$PROJECT_DIR$/templates/test_comment.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -682,13 +683,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b0734e0f-845b-45a8-a9de-008ca8e3c660/console.sql" />
     <entry file="file://$PROJECT_DIR$/web/views/tools.py" />
-    <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statics/upload/下载.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -727,30 +721,6 @@
           <folding>
             <element signature="e#825#1571#0" />
             <element signature="e#1608#2043#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_userinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/small_talk.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4284">
-          <caret line="238" column="30" selection-start-line="238" selection-start-column="30" selection-end-line="238" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -796,33 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/utils/spider_bugInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="86" selection-start-line="86" selection-end-line="87" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/utils/mysql_bugInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
-          <caret line="278" column="56" lean-forward="true" selection-start-line="278" selection-start-column="56" selection-end-line="278" selection-end-column="56" />
-          <folding>
-            <element signature="e#45#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
@@ -833,10 +776,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_spiderproduct">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/backend/utils/mysql_bugInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/spider_bugInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="86" selection-start-line="86" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -847,46 +800,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_spiderproduct">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="72" column="67" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="67" />
+        <state relative-caret-position="108">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <element signature="e#45#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="88" column="80" selection-start-line="88" selection-start-column="80" selection-end-line="88" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8892">
+          <caret line="494" column="10" selection-start-line="494" selection-start-column="1" selection-end-line="494" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="21" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/small_talk.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="e#1708#1732#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_userinfo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="285" column="60" selection-start-line="285" selection-start-column="60" selection-end-line="285" selection-end-column="60" />
+        <state relative-caret-position="4482">
+          <caret line="262" column="24" selection-start-line="262" selection-start-column="24" selection-end-line="262" selection-end-column="24" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
+    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="296" column="21" lean-forward="true" selection-start-line="296" selection-start-column="21" selection-end-line="296" selection-end-column="21" />
+        <state relative-caret-position="3528">
+          <caret line="196" column="15" selection-start-line="196" selection-start-column="15" selection-end-line="196" selection-end-column="15" />
+          <folding>
+            <element signature="n#if#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="535" column="34" selection-start-line="535" selection-start-column="34" selection-end-line="535" selection-end-column="34" />
-          <folding>
-            <element signature="e#8943#9483#0#HTML" />
-            <element signature="e#10229#11114#0#HTML" />
-            <element signature="e#16860#17638#0#HTML" />
-            <element signature="e#17671#17832#0#HTML" />
-            <element signature="e#17891#19635#0#HTML" />
-            <element signature="e#19679#19874#0#HTML" />
-            <element signature="e#20247#21121#0#HTML" />
-            <element signature="e#20268#21110#0#HTML" />
-            <element signature="e#22159#23409#0#HTML" />
-            <element signature="e#23472#24477#0#HTML" />
-          </folding>
+        <state relative-caret-position="957">
+          <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
         </state>
       </provider>
     </entry>

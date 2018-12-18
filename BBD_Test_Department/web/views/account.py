@@ -260,24 +260,26 @@ def update_item(req):
                 models.SpiderProduct.objects.create(pro_info=pro_item_1)
                 rep.status = True
                 rep.data = pro_item_1
+                rep.message = "数据成功获取！"
             except Exception as e:
                 print('报错信息:',e)
                 rep.status = False
-                rep.message = "爬取项目名称时，出错了！~"
+                rep.message = "爬取数据，出错！"
         elif zentao_id == '2':
             try:
                 pro_item_2 = mbi.product_info()
                 models.SpiderProduct.objects.create(pro_info=pro_item_2)
                 rep.status = True
                 rep.data = pro_item_2
+                rep.message = "数据成功获取！"
             except Exception as e:
                 print('报错信息:', e)
                 rep.status = False
-                rep.message = "数据库连接时候时，出错了！~"
+                rep.message = "远程数据库，拒绝访问！"
 
         else:
             rep.status = False
-            rep.message = "没得你的项目信息！~"
+            rep.message = "无项目信息！~"
 
 
 
@@ -315,7 +317,7 @@ def update_item(req):
                 rep.status = False
         else:
             rep.status = False
-            rep.message = "没得你的BUG信息！~"
+            rep.message = "无BUG信息！~"
 
 
         # print("bug_lis",bug_lis)
