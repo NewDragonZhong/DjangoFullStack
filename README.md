@@ -5,6 +5,7 @@ python(版本 3.6.1)
   -- from lxml import etree
   -- PIL -> pillow
   -- pyMySql
+  -- docxtpl 
   -- redis
   -- 大概就这些，如果不能运行 记住pip install xxx 
  Django版本: Django2.1.3
