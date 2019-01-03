@@ -17,22 +17,12 @@
                                 <option value="nd123" >请选择项目名称...</option>
                             </select>
                         </div>
-
-                        {% if userinfo.is_login %}
                             <a href="javascript:void(0);" class="publish-btn" id="updateItem">
                                 <span class="ico n1"></span><span class="n2">更新项目</span>
                             </a>
                             <a href="javascript:void(0);" class="publish-btn2" id="getData">
                                 <span class="ico n1"></span><span class="n2">获取数据</span>
                             </a>
-                        {% else %}
-                            <a href="javascript:void(0);" class="publish-btn" id="updateItem">
-                                <span class="ico n1"></span><span class="n2">更新项目</span>
-                            </a>
-                            <a href="javascript:void(0);" class="publish-btn2" id="getData">
-                                <span class="ico n1"></span><span class="n2">获取数据</span>
-                            </a>
-                        {% endif %}
                     </div>
 
                     <div class="nav-form-area">
@@ -113,9 +103,9 @@
                     </div>
 
 
-                    {% if userinfo.is_login %}
+                    {% if request.session.is_login %}
                         <div class="form-group-submit">
-                            <button type="button" class="btn btn-primary" id="CreateReport">生成报告</button>
+                            <a class="btn btn-primary" id="CreateReport" href="{% url 'report_download' %}" style="color: white">生成报告</a>
                             <button type="button" class="btn btn-default" disabled="disabled" id="SendReport">发送报告</button>
                                 <span class="hide spanSR">
                                     <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
@@ -124,7 +114,7 @@
                         </div>
                     {% else %}
                         <div class="form-group-submit">
-                            <button type="button" class="btn btn-primary" id="CreateReport">生成报告</button>
+                            <a class="btn btn-primary" id="CreateReport" href="javascript:void(0);" style="color: white">生成报告</a>
                             <button type="button" class="btn btn-default" disabled="disabled" id="SendReport">发送报告</button>
                                 <span class="hide spanSR">
                                     <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
@@ -150,8 +140,15 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <strong>操作成功！</strong>
-                    <h6>(1.报告信息已被保存数据库，若要重新生成，请刷新页面点击“生成报告”!)</h6>
-                    <h6>(2.若要修改数据，请刷新页面后，填写要修改的部分，点击“生成报告”!)</h6>
+                    <h6>(1.报告信息已被保存数据库，若要重新生成，请刷新页面点击“生成报告”! </h6>
+                    <h6>(2.若要修改数据，请刷新页面后，填写要修改的部分，点击“生成报告”! </h6>
+                    <h6>(3.若需发送自定义后的报告，请选择完后，点击 “重新上传”！</h6>
+
+                    <div>
+                        <input type="file" name="file" id="file_upload">
+                        <input type="button" value="重新上传" onclick="FileUpload()">
+                    </div>
+
                 </div>
 
 
@@ -418,7 +415,6 @@
 
 
 
-
         //绑定了，一个发送短信验证码的事件
         function BindSendMsg(){
             $("#fetch_code").click(function(){
@@ -493,7 +489,6 @@
                                        '<option value="'+v+'">'+k+'</option>'
                                     )
                                 });
-
                             } else {
                                 alert(arg.message);
                                 console.log("出错了！")
@@ -579,13 +574,24 @@
                             if (arg.status){
                                 $('#alertSuccess').removeClass('hide');
                                 $('#SendReport').removeClass('default').addClass('btn-success').removeAttr("disabled");
-                                $('#CreateReport').addClass('default').removeClass('btn-primary').attr('disabled','disabled');
+                                $('#CreateReport').remove();
                             }else {
                                 console.log(arg.message);
                                 console.log(arg.status);
                             }
                         }
-                    })
+                    });
+
+                    {#$.ajax({#}
+                    {#    url: '/report_download/',#}
+                    {#    type:'GET',#}
+                    {#    success: function (data) {#}
+                    {#        $.download('/report_download/','post',data.value); // 下载文件到本地#}
+                    {#    }#}
+                    //});
+
+
+
                 }else{
                     $('#accountDialog').removeClass('hide');
                     $('.shadow').removeClass('hide');
@@ -593,6 +599,32 @@
             });
 
         }
+
+        /* 绑定了一个上传 自定义报告的事件*/
+        function FileUpload() {
+            var form_data = new FormData();
+            var file_info = $('#file_upload')[0].files[0];
+            form_data.append('file',file_info);
+
+            $('#alertSuccess').addClass('hide');
+
+            $.ajax({
+                url:'/upload_customFile/',
+                type:'POST',
+                data:form_data,
+                processData:false,
+                contentType:false,
+                success:function (callback) {
+                    console.log("OK!");
+                    if (callback.status){
+                        alert("修改文件上传成功！");
+                    }else {
+                        alert("修改文件上传失败！");
+                    }
+                }
+            });
+        }
+
 
 
         /* 绑定一个发送报告的事件 */

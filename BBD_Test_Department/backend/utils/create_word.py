@@ -16,9 +16,9 @@ class CreateWord:
         self.headLine = headLine
 
         self.path1 = os.path.join(os.getcwd(), r'templates\TR_templates')
-        self.path2 = r'C:\Users\Administrator\Desktop'
+        self.path2 = r'C:\Users\Administrator\Desktop\%s' % nid
         self.souceFile_path = os.path.join(self.path1, 'test_pro2.docx')
-        self.resultFile_path = os.path.join(self.path2, '%s测试报告.docx' % self.headLine)
+        self.resultFile_path = os.path.join(self.path2, r'%s测试报告.docx' % self.headLine)
 
         # print(self.obj_mi.equ_env)
         # print(type(self.obj_mi.equ_env))
@@ -35,6 +35,15 @@ class CreateWord:
 
     def create_word(self):
         self.tpl = DocxTemplate(self.souceFile_path)
+
+        # 创建文件夹目录
+        try:
+            os.makedirs(self.path2)
+        except FileExistsError as e:
+            print("目录已经存在，请继续")
+        finally:
+            print(self.resultFile_path)
+
 
         self.context = {
             "headLine": self.headLine,

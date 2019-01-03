@@ -35,10 +35,13 @@ urlpatterns = [
 
     # url(r'^add_comment/$', home.add_comment),
     # url(r'^show/$', home.show),
-    url(r'^small_talk/([0-9]*)', home.small_talk),
+    # url(r'^test_upload/$', home.test_upload),
+
+    url(r'^news/([0-9]*)', home.news),
     url(r'^index/([0-9]*)', home.index),
     url(r'^modal_info/$', home.modal_info),
     url(r'^update_item/$', account.update_item),
     url(r'^creat_report/$', account.creat_report),
-
+    url(r'^report_download/$', account.report_download,name='report_download'),
+    url(r'^upload_customFile/$',account.custom_file_upload),
 ]

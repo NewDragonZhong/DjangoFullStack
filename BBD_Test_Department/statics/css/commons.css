@@ -1028,8 +1028,8 @@ textarea.txt-huifu-top:focus{
 /* 自定义弹框 */
 .custom-alert-success{
     position: fixed;
-    width: 350px;
-    height: 120px;
+    width: 430px;
+    height: 210px;
     left:50%;
     top: 50%;
     margin-left: -250px;

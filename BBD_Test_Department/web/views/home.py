@@ -18,7 +18,8 @@ from backend import commons
 
 
 
-def small_talk(request,page):
+
+def news(request,page):
     """
         主页
     :param request:
@@ -35,7 +36,7 @@ def small_talk(request,page):
         str_news = models.News.objects.all().values()[pagin.start:pagin.end]
 
 
-        return render(request, 'small_talk.html', {'news_list': str_news, 'pagin':pagin})
+        return render(request, 'news.html', {'news_list': str_news, 'pagin':pagin})
 
 
 
@@ -379,3 +380,20 @@ def modal_info(req):
     # return modal_info_dict
 
 
+#"---------------------*******************-------------------"
+# 以下是测试页面
+
+from change_chouti.settings import BASE_DIR  # 导入系统的根路径
+
+def test_upload(req):
+    if req.method == 'POST':
+        file_obj = req.FILES.get('file')
+        f = open(os.path.join(BASE_DIR,'statics','upload',file_obj.name),'wb')
+        print(file_obj,type(file_obj))
+
+        for chunk in file_obj.chunks():
+            f.write(chunk)
+        f.close()
+        print("文件存储已完成！")
+
+    return render(req, 'test.html', locals())

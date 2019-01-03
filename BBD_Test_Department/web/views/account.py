@@ -345,7 +345,6 @@ def creat_report(req):
 
     rep.status = True
     if req.method == "POST":
-
         try:
             filePath = cw.create_word() # 获取文档路径
             rep.message = "word生成成功！"
@@ -378,3 +377,45 @@ def creat_report(req):
 
 
     return HttpResponse(json.dumps(rep.__dict__))
+
+
+from django.http import FileResponse # 导入下载传输模块
+from django.utils.http import urlquote # 导入模块动态生成下载文件名
+import os
+import time
+
+def report_download(req):
+    time.sleep(1) # 让文件生成后再执行下载操作
+    fileName = os.path.basename(filePath) # 获取文件名字
+    print(fileName)
+
+    file = open(filePath,'rb')
+    response = FileResponse(file)
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="{0}"'.format(urlquote(fileName))
+
+    return response
+
+
+# 自定义上传报告功能
+def custom_file_upload(req):
+    rep_cfu = BaseResponse()
+    time.sleep(1)  # 让文件生成后再执行下载操作
+
+    if req.method == 'POST':
+        f = open(filePath, 'wb') #  打开即将要修改的文件
+        try:
+            file_obj = req.FILES.get('file')
+            # print(file_obj,type(file_obj))  # 测试文件的类型
+            for chunk in file_obj.chunks():
+                f.write(chunk)
+            rep_cfu.data = "修改文件上传成功！"
+            rep_cfu.status = True
+        except Exception as e:
+            print("报错内容:",e)
+            rep_cfu.data = "修改文件上传失败！"
+            rep_cfu.status = False
+        finally:
+            f.close()
+
+    return HttpResponse(json.dumps(rep_cfu.__dict__))
