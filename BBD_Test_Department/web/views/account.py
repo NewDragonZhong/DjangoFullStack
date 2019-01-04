@@ -352,6 +352,8 @@ def creat_report(req):
         except Exception as e:
             rep.status = False
             rep.message = e
+            rep.summary = "操作失败！"
+
 
     if req.method == "GET":
         print('这是文件的filePath:',filePath)
@@ -409,11 +411,11 @@ def custom_file_upload(req):
             # print(file_obj,type(file_obj))  # 测试文件的类型
             for chunk in file_obj.chunks():
                 f.write(chunk)
-            rep_cfu.data = "修改文件上传成功！"
+            rep_cfu.message = "修改文件上传成功！"
             rep_cfu.status = True
         except Exception as e:
             print("报错内容:",e)
-            rep_cfu.data = "修改文件上传失败！"
+            rep_cfu.message = "修改文件上传失败！"
             rep_cfu.status = False
         finally:
             f.close()

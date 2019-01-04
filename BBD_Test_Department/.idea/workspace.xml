@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="1034" column="24" lean-forward="true" selection-start-line="1034" selection-start-column="24" selection-end-line="1034" selection-end-column="24" />
+            <state relative-caret-position="455">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
             </state>
           </provider>
         </entry>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="486">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -74,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/home.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
+            <state relative-caret-position="1278">
               <caret line="85" column="34" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="34" />
               <folding>
                 <element signature="e#45#54#0" expanded="true" />
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="419" column="57" lean-forward="true" selection-start-line="419" selection-start-column="57" selection-end-line="419" selection-end-column="57" />
+            <state relative-caret-position="453">
+              <caret line="430" column="18" lean-forward="true" selection-start-line="430" selection-start-column="18" selection-end-line="430" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -95,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
+            <state relative-caret-position="2286">
               <caret line="127" column="25" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="25" />
             </state>
           </provider>
@@ -105,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/templates/_layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="42" />
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -114,20 +114,16 @@
         <entry file="file://$PROJECT_DIR$/templates/test.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="490" column="35" selection-start-line="490" selection-start-column="35" selection-end-line="490" selection-end-column="35" />
-              <folding>
-                <element signature="e#7008#7028#0#HTML" expanded="true" />
-                <element signature="e#7601#7621#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="473">
+              <caret line="579" column="56" lean-forward="true" selection-start-line="579" selection-start-column="56" selection-end-line="579" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -135,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/account.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="174" column="29" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="29" />
+            <state relative-caret-position="391">
+              <caret line="355" selection-start-line="355" selection-end-line="355" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -156,9 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>news-type</find>
-      <find>find</find>
-      <find>small_talk</find>
       <find>news_list</find>
       <find>radio</find>
       <find>huifu-top-box</find>
@@ -172,10 +165,8 @@
       <find>获取标题</find>
       <find>BindPublishSubmit</find>
       <find>不谈</find>
-      <find>生成报告</find>
       <find>UploadImage</find>
       <find>report_download</find>
-      <find>CreateReport</find>
       <find>custom-alert-succes</find>
       <find>alertSuccess</find>
       <find>BASE_DIR</find>
@@ -186,6 +177,11 @@
       <find>action_nav</find>
       <find>userinf</find>
       <find>updateItem</find>
+      <find>FileUpload</find>
+      <find>生成报告</find>
+      <find>CreateReport\</find>
+      <find>hide</find>
+      <find>CreateReport</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -223,16 +219,15 @@
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/statics/css/commons.css" />
         <option value="$PROJECT_DIR$/change_chouti/urls.py" />
-        <option value="$PROJECT_DIR$/web/views/account.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/web/views/account.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="3" />
+    <option name="x" value="5" />
     <option name="width" value="1732" />
-    <option name="height" value="993" />
+    <option name="height" value="998" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -272,6 +267,12 @@
               <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
               <item name="statics" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="statics" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
@@ -515,11 +516,12 @@
       <workItem from="1545983222800" duration="672000" />
       <workItem from="1546050576666" duration="17316000" />
       <workItem from="1546391172975" duration="24024000" />
+      <workItem from="1546482203953" duration="19606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311805000" />
+    <option name="totallyTimeSpent" value="331411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,10 +533,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="3" width="1732" height="993" extended-state="0" />
-    <editor active="true" />
+    <frame x="5" y="0" width="1732" height="998" extended-state="0" />
     <layout>
-      <window_info id="Project" order="0" visible="true" weight="0.14413875" />
+      <window_info id="Project" order="0" visible="true" weight="0.14593302" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -546,7 +547,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.328341" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.29384437" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.29214782" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32882413" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21035169" side_tool="true" weight="0.24367817" />
       <window_info anchor="bottom" id="调试" order="12" />
@@ -596,7 +597,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/24e36749/5df68e36-0938-42fb-8831-bf79c6315598/main.web_userinfo" />
     <entry file="das://table:/24e36749/5df68e36-0938-42fb-8831-bf79c6315598/main.web_news" />
     <entry file="file://$PROJECT_DIR$/statics/upload/4.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -751,53 +751,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="419" column="57" lean-forward="true" selection-start-line="419" selection-start-column="57" selection-end-line="419" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/upload/微信图片_20190102111838.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/upload/微信图片_20190102111818.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/upload/微信图片_20190102111838.jpg" />
+    <entry file="file://$PROJECT_DIR$/statics/upload/微信图片_20190102111818.jpg" />
     <entry file="file://$PROJECT_DIR$/templates/comment.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="1034" column="24" lean-forward="true" selection-start-line="1034" selection-start-column="24" selection-end-line="1034" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="127" column="25" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="486">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/home.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
+        <state relative-caret-position="1278">
           <caret line="85" column="34" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="34" />
           <folding>
             <element signature="e#45#54#0" expanded="true" />
@@ -805,31 +773,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2286">
+          <caret line="127" column="25" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="174" column="29" selection-start-line="174" selection-start-column="21" selection-end-line="174" selection-end-column="29" />
+        <state relative-caret-position="391">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+    <entry file="file://$PROJECT_DIR$/statics/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="455">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="490" column="35" selection-start-line="490" selection-start-column="35" selection-end-line="490" selection-end-column="35" />
-          <folding>
-            <element signature="e#7008#7028#0#HTML" expanded="true" />
-            <element signature="e#7601#7621#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="473">
+          <caret line="579" column="56" lean-forward="true" selection-start-line="579" selection-start-column="56" selection-end-line="579" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="430" column="18" lean-forward="true" selection-start-line="430" selection-start-column="18" selection-end-line="430" selection-end-column="18" />
         </state>
       </provider>
     </entry>

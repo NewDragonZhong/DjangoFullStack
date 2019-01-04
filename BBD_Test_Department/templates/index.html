@@ -106,7 +106,7 @@
                     {% if request.session.is_login %}
                         <div class="form-group-submit">
                             <a class="btn btn-primary" id="CreateReport" href="{% url 'report_download' %}" style="color: white">生成报告</a>
-                            <button type="button" class="btn btn-default" disabled="disabled" id="SendReport">发送报告</button>
+                            <button type="button" class="btn btn-default hide" disabled="disabled" id="SendReport">发送报告</button>
                                 <span class="hide spanSR">
                                     <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
                                     <span>报告发送中...</span>
@@ -115,7 +115,7 @@
                     {% else %}
                         <div class="form-group-submit">
                             <a class="btn btn-primary" id="CreateReport" href="javascript:void(0);" style="color: white">生成报告</a>
-                            <button type="button" class="btn btn-default" disabled="disabled" id="SendReport">发送报告</button>
+                            <button type="button" class="btn btn-default hide" disabled="disabled" id="SendReport">发送报告</button>
                                 <span class="hide spanSR">
                                     <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
                                     <span>报告发送中...</span>
@@ -573,7 +573,7 @@
                         success: function (arg) {
                             if (arg.status){
                                 $('#alertSuccess').removeClass('hide');
-                                $('#SendReport').removeClass('default').addClass('btn-success').removeAttr("disabled");
+                                $('#SendReport').removeClass('default').removeClass('hide').addClass('btn-success').removeAttr("disabled");
                                 $('#CreateReport').remove();
                             }else {
                                 console.log(arg.message);
@@ -581,23 +581,11 @@
                             }
                         }
                     });
-
-                    {#$.ajax({#}
-                    {#    url: '/report_download/',#}
-                    {#    type:'GET',#}
-                    {#    success: function (data) {#}
-                    {#        $.download('/report_download/','post',data.value); // 下载文件到本地#}
-                    {#    }#}
-                    //});
-
-
-
                 }else{
                     $('#accountDialog').removeClass('hide');
                     $('.shadow').removeClass('hide');
                 }
             });
-
         }
 
         /* 绑定了一个上传 自定义报告的事件*/
@@ -614,12 +602,14 @@
                 data:form_data,
                 processData:false,
                 contentType:false,
-                success:function (callback) {
+                dataType:'json',
+                success:function (arg) {
                     console.log("OK!");
-                    if (callback.status){
-                        alert("修改文件上传成功！");
+                    console.log(arg);
+                    if (arg.status){
+                        alert(arg.message);
                     }else {
-                        alert("修改文件上传失败！");
+                        alert(arg.message);
                     }
                 }
             });
