@@ -28,7 +28,8 @@ class CreateWord:
 
 
     def buffer_func(self,data):
-        result = json.loads(data.replace("'","\""))
+        result = json.loads(data.replace('"',' ').replace("'",'"'))
+        # print('result:',result)
         return result
 
 

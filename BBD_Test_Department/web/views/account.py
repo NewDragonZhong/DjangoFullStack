@@ -300,7 +300,7 @@ def update_item(req):
                 rep.message = '数据爬取成功'
             except IndexError as e:
                 print("报错信息:",e)
-                rep.message = '锅佬倌，点下拉框选项目！'
+                rep.message = '请选择项目 或 该项目内容为空！'
                 rep.status = False
         elif zentao_id == '2':
             try:
@@ -340,7 +340,6 @@ def creat_report(req):
     headLine = req.POST.get('itemName')
     cw = CreateWord(u_nid, headLine)
 
-
     global filePath
 
     rep.status = True
@@ -348,11 +347,13 @@ def creat_report(req):
         try:
             filePath = cw.create_word() # 获取文档路径
             rep.message = "word生成成功！"
+            rep.summary = "操作成功！"
             rep.status = True
         except Exception as e:
             rep.status = False
-            rep.message = e
+            rep.message = "word生成失败！"
             rep.summary = "操作失败！"
+            print("报错原因：",e)
 
 
     if req.method == "GET":
@@ -374,10 +375,6 @@ def creat_report(req):
         print('ePassword:',ePassword)
 
         email_report(filePath, emailCount, email_list,authorEmail=authorEmail,ePassword=ePassword)
-
-
-
-
     return HttpResponse(json.dumps(rep.__dict__))
 
 
@@ -387,7 +384,7 @@ import os
 import time
 
 def report_download(req):
-    time.sleep(1) # 让文件生成后再执行下载操作
+    time.sleep(2)
     fileName = os.path.basename(filePath) # 获取文件名字
     print(fileName)
 
