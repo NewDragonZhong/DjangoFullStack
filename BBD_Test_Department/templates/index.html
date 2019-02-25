@@ -179,6 +179,7 @@
 
 
     <div class="shadow hide"></div>
+    <div class="loading-ico-index loading-ico-top-index hide"  style="margin:-40% 40% 40% 47%;">加载中，请稍候...</div>
 
 </div>
 {% endblock %}
@@ -537,6 +538,7 @@
                 if ($('#action_nav').attr('is-login') == 'true') {
                     var itemId = $('#productItem').val();
 
+                    $('.loading-ico-index').removeClass('hide'); //显示正在加载的按钮
                     console.log(itemId);
 
                     $.ajax({
@@ -550,6 +552,8 @@
                             } else {
                                 alert(arg.message)
                             }
+
+                            $('.loading-ico-index').addClass('hide'); //隐藏正在加载的按钮
                         }
                     })
                 } else {

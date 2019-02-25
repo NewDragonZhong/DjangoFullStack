@@ -227,7 +227,7 @@ textarea {
     background-color: #fff;
 }
 .pg-header .user-opr-box a{
-    text-align: center;
+    text-align: center;#modal-del-info-btn
     height: 31px;
     line-height: 31px;
     display: block;
@@ -239,6 +239,29 @@ textarea {
     background-color:#eee
 }
 /*  头部结束 */
+
+
+/* 发送报告延时等到效果 */
+.loading-ico-index {
+    background: url("/statics/images/loadinfo.gif") -3px 7px no-repeat;
+    padding-left: 30px;
+    clear: both;
+    height: 31px;
+    line-height: 31px;
+    float: left;
+    margin-right: 6px;
+}
+.loading-ico-top-index {
+    background: url("/statics/images/pinglun_loading.gif?v=2.7") no-repeat 0 7px;
+    padding-left: 23px;
+    color: #369;
+    margin-right: 0;
+    margin-top: -5px;
+    cursor: default;
+}
+/* 发送报告延时等到效果 效果结束 */
+
+
 
 /* 选择禅道版本的模态框  */
 .modal-dialog-zentao{
@@ -1215,7 +1238,7 @@ textarea.txt-huifu-top:focus{
     background-color: #2aabd2;
     width: 116px;
     /*display: block;*/
-    margin:-60px 15px 5px 380px;
+    margin:-61px 15px 5px 380px;
     color: #fff;
     border-color: #46b8da;
 }
