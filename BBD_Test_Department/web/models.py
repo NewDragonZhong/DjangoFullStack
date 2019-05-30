@@ -89,3 +89,28 @@ class SpiderTable(models.Model):
 
 class SpiderProduct(models.Model):
     pro_info = models.CharField(max_length=64)
+
+
+
+class PertestingTable(models.Model):
+    user_info = models.ForeignKey(to='UserInfo', to_field='nid', on_delete=models.CASCADE)
+    method = models.CharField(max_length=32, null=True)
+    maxnum = models.IntegerField(max_length=16,default=0)      # 最大并发数
+    oncenum = models.IntegerField(max_length=16, default=0)    # 每秒启动的并发数
+    hosts = models.CharField(max_length=32,null=True)
+    paths = models.CharField(max_length=64)
+    headers = models.CharField(max_length=128)
+    datas = models.CharField(max_length=128)
+
+    success_req = models.IntegerField(max_length=16,default=0)
+    lose_req = models.IntegerField(max_length=16,default=0)
+    total_req = models.IntegerField(max_length=16,default=0)
+
+    total_time = models.FloatField(max_length=16,default=0.0) # 请求总共花费的时间
+    avg_time = models.FloatField(max_length=16,default=0.0)   #  请求的平均时间
+    count_time = models.FloatField(max_length=16,default=0.0) # 单次并发请求的时间
+
+    loop_num = models.IntegerField(max_length=16, default=0) # 请求循环次数
+    rps = models.FloatField(max_length=16,default=0.0)  # 每秒处理的事务数
+
+    ctime = models.DateTimeField(auto_now_add=True)

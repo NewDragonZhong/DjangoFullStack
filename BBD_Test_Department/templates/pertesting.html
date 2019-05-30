@@ -1,0 +1,460 @@
+{% extends "_layout.html" %}
+{% load index_username %}
+
+{% block css %}
+    <link rel="stylesheet" href="/statics/plugins/tab-menu-box/tab.css">
+{% endblock %}
+
+
+{% block body %}
+<div class="pg-body">
+    <div style="background-color: #eee;">
+        <div class="w body-content">
+            <div class="clearfix">
+                    <div class="content-l">
+                        <div class="bs-example" style="margin-top: 50px">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>请求次数</th>
+                                        <th>成功请求</th>
+                                        <th>失败请求</th>
+                                        <th>请求总计</th>
+                                        <th>平均用时</th>
+                                        <th>用时总计</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">0</th>
+                                        <th>0</th>
+                                        <th>0</th>
+                                        <th>0</th>
+                                        <th>0</th>
+                                        <th>0</th>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="requestsTime" style="width: 100%;height: 300px;margin-top: 66px"></div>
+                        <div id="tps" style="width: 100%;height: 300px;margin-top: 66px"></div>
+                    </div>
+
+
+                    <div class="content-r">
+                        <div class="form-group form-group-div">
+                            <div class="nav-top-area">
+                                <div class="child-nav" style="margin-bottom: 15px">
+                                    <input type="text" style="margin-left: 10px;width: 100px;height: 33px;text-align:center;font-size:8px;border-radius:4px" class="form-control-per form_info" name="maxNum" placeholder="最大并发数">
+                                    <input type="text" style="margin-left: 29px;width: 100px;height: 33px;text-align:center;font-size:8px;border-radius:4px" class="form-control-per form_info" name="onceNum" placeholder="每次启动并发数">
+                                </div>
+                        </div>
+                        <div class="nav-form-area">
+                            <select class="form-control form_info" style="height: 33px;width: 244px;margin-bottom: 15px;" name="reqMethods">
+                                        <option value="get">GET</option>
+                                        <option value="post">POST</option>
+                                        <option value="put">PUT</option>
+                                        <option value="delete">DELETE</option>
+                                    </select>
+                            <div class="form-group form-group-div-per">
+                                <label for="exampleInputName2">请求地址:</label>
+                                <input type="text" class="form-control form_info" name="hosts" placeholder="例如:http://www.baidu.com" style="width: 244px;">
+                            </div>
+
+                            <div class="form-group form-group-div-per">
+                                <label for="exampleInputName2">请求路径:</label>
+                                <input type="text" class="form-control form_info" name="paths" placeholder="请输入请求路径">
+                            </div>
+
+                            <div class="form-group form-group-div-per">
+                                <label for="exampleInputName2">请求头:</label>
+                                <textarea class="form-control form_info" name="headers" placeholder='例如：{"key":"value",...}'></textarea>
+                            </div>
+
+                            <div class="form-group form-group-div-per">
+                                <label for="exampleInputName2">请求体:</label>
+                                <textarea class="form-control form_info" name="datas" placeholder='例如：{"key":"value",...}'></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group-submit">
+                            <button type="button" class="btn btn-success glyphicon glyphicon-play-circle"  id="SendRequests" style="width: 100px;margin-left: 83px"> Start </button>
+                                <span class="hide spanSR">
+                                    <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
+                                    <span>请求发送中...</span>
+                                </span>
+                        </div>
+            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block javascript %}
+    <script src="/statics/js/jquery-2.1.4.min.js"></script>
+    <script src="/statics/js/echarts.js"></script>
+    <script type="text/javascript" src="/statics/plugins/tab-menu-box/tab.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        BindTabMenu('#tab-menu-title', '#tab-menu-body');
+        $('.act-menu').children().eq(2).addClass('active');
+
+        SendRequest();
+        SendResponse();
+    });
+
+    // ajax 发送请求数据到后端 并存储
+    function SendRequest() {
+       $('.form_info').blur(function () {
+                var labelName = $(this).attr('name');
+                var labelValue = $(this).val();
+                if ($('#action_nav').attr('is-login') == 'true'){
+                      $.ajax({
+                        url: '/per_data_store/',
+                        type: 'post',
+                        data: {labelName:labelName,labelValue:labelValue},
+                        dataType: 'json',
+                        success: function (arg) {
+                            if (arg.status){
+                                console.log('完了！~')
+                            } else {
+                                console.log("出错了！")
+                            }
+                        }
+                    })
+                }else {
+                    console.log("锅佬倌！先登录")
+                }
+            });
+    }
+
+
+    // 点击ajax请求接口函数 并 获取数据
+    function req_send() {
+        var data;
+        var loop_num = 1;
+        var obj_place=$("tbody tr th");
+            $.ajax({
+                url: '/per_data_extract/',
+                type: 'post',
+                data: {loop_num:loop_num},
+                dataType: 'json',
+                success: function (arg) {
+                    if (arg.status){
+                        _sum = arg.message;
+                        data = arg.data;
+                        obj_place.eq(0).text(data[5]);
+                        obj_place.eq(1).text(data[0]);
+                        obj_place.eq(2).text(data[1]);
+                        obj_place.eq(3).text(data[2]);
+                        obj_place.eq(4).text(data[3]);
+                        obj_place.eq(5).text(data[4]);
+                        // 绘制时间图表
+                        reqTime_xAxis.push(_sum[2]);
+                        tps_series.push(_sum[1]);
+                        reqTime_series.push(_sum[0]);
+                        myChart_reqTime.setOption({
+                            xAxis:{
+                                data:reqTime_xAxis
+                            },
+                            series:[{
+                                    name:'单次请求用时',
+                                    data:reqTime_series
+                                }]
+                        });
+                        myChart_tps.setOption({
+                            xAxis:{
+                                data:reqTime_xAxis
+                            },
+                            series:[{
+                                name:'系统吞吐量',
+                                data:tps_series
+                            }]
+                        })
+                    } else {
+                        console.log(arg.summary);
+                        }
+                    }
+                });
+    }
+
+    // 点击Start Swimming 开始测试并返回数据到客户端
+    var time;
+    function SendResponse() {
+        var num = 1; // 判断点击次数
+        $('#SendRequests').click(function () {
+            if ($('#action_nav').attr('is-login') == 'true'){
+                if (num%2 == 1){
+                    $(this).removeClass('btn-success glyphicon-play-circle').addClass('btn-danger glyphicon-off');
+                    $(this).html(' Stop');
+                    time = setInterval(req_send,1000); // 进行一个循环 需要用到计时器
+                }else {
+                    $(this).removeClass('btn-danger glyphicon-off').addClass('btn-success glyphicon-play-circle');
+                    $(this).html(' Start');
+                    clearInterval(time)
+                }
+                num += 1;
+            }else {
+                $('#accountDialog').removeClass('hide');
+                $('.shadow').removeClass('hide');
+                console.log("锅佬倌！先登录")
+            }
+        });
+    }
+
+
+
+    // 画图工具初始化
+    //定义绘图时的数据容器
+    var reqTime_xAxis = [];  // 单次请求用时_横坐标列表  & 与吞吐量共用一个列表
+    var reqTime_series = [];  // 单次请求用时_数据列表
+    var tps_series = [];    // 吞吐量_数据列表
+    // 初始化echarts图表
+    var myChart_reqTime = echarts.init(document.getElementById('requestsTime'));
+    var myChart_tps = echarts.init(document.getElementById('tps'));
+    // 指定图表的配置项和数据
+    var option_reqTime = {
+       title:{
+            text:"请求用时",
+            subtext:"每轮请求用时"
+        },
+        tooltip:{
+            trigger:'axis'
+        },
+        legend:{
+            data:['单次请求用时']
+        },
+        toolbox:{
+            show:true,
+            orient:'horizontal', // 布局方式默认为水平布局，可选为：horizontal | vertical
+            left:'right', //left的值可以是像素如:20;也可是百分比如:20%;还可以是:left\center\right
+            top:'top', //top的值可以是像素如:20;也可是百分比如:20%;还可以是:top\middle\bottom
+            //x:'right', // 水平安放位置,默认为全图右对齐,可选: center|left|right|{number}(x坐标，单位px)
+            //y:'top' // 垂直安放位置,默认为全图顶端,可选: center|top|bottom|{number}(x坐标，单位px)
+            color:[''],
+            backgroundColor:'rgba(0,0,0,0)', // 工具箱背景颜色
+            borderColor:'#ccc',  // 工具箱边框颜色
+            borderWidth:0,  // 工具箱边框线宽，单位px,默认为0(无边框)
+            padding:5,  // 工具箱内边距，单位px,默认各方向内边距为5
+            showTitle:true,
+            feature:{
+                mark:{
+                    show:true,
+                    title:{
+                        mark:'辅助线-开关',
+                        markUndo:'辅助线-删除',
+                        markClear:'辅助线-清空'
+                    },
+                    lineStyle:{
+                        width:1,
+                        color:'#1e90ff',
+                        type:'dashed'
+                    }
+                },
+                dataZoom:{
+                    show:true,
+                    title:{
+                        dataZoom:'区域缩放',
+                        dataZoomReset:'区域缩放-后退'
+                    }
+                },
+                dataView:{
+                    show:true,
+                    title:'数据视图',
+                    readOnly:true,
+                    lang:['数据视图','关闭','刷新'],
+                    optionToContent:function (opt) {
+                        console.log(opt);
+                        var axisData = opt.xAxis[0].data;
+                        var series = opt.series;
+                        var table = '<table style="width:100%;text-align"center"><tbody><tr>'
+                                    +'<td>时间</td>'
+                                    + '<td>' + series[0].name + '</td>'
+                                    + '<td>' + series[1].name + '</td>' + '</tr>';
+                        for (var i = 0,l=axisData.length; i<l; i++){
+                            table += '<tr>'
+                                     + '<td>' + axisData[i] + '</td>'
+                                     + '<td>' + series[0].data[i] + '</td>'
+                                     + '<td>' + series[1].data[i] + '</td>' + '</tr>';
+                        }
+                        table += '</tbody></table>';
+                        return table;
+                    }
+                },
+                magicType:{
+                    show:true,
+                    title:{
+                        line:'折线图',
+                        bar:'柱状图',
+                        stack:'堆积',
+                        tiled:'平铺'
+                    },
+                    type:['line','bar','stack','tiled']
+                },
+                restore:{
+                    show:true,
+                    title:'还原',
+                    color:'black'
+                },
+                saveAsImage:{
+                    show:true,
+                    title:'保存图片',
+                    type:'jpeg',
+                    lang:['点击本地保存']
+                }
+            }
+        },
+        calculable:true,
+        dataZoom:{
+            show:true,  // 是否显示数据区域缩放
+            realtime:true,  // 缩放变化是否实时显示
+            start:20,  // 数据缩放选择开始比例，默认为100%
+            end:80  // 数据缩放选择结束比例 默认为100%
+        },
+        xAxis:[
+            {
+                type:'category',
+                boundaryGap:false,
+                data:[]
+            }
+        ],
+        yAxis:[
+            {
+                type:'value'
+            }
+        ],
+        series:[
+            {
+                name:'单次请求用时',
+                type:'line',
+                data:[]
+            }
+        ]
+    };
+    var option_tps = {
+       title:{
+            text:"业务吞吐量",
+            subtext:"每秒处理事物数"
+        },
+        tooltip:{
+            trigger:'axis'
+        },
+        legend:{
+            data:['系统吞吐量']
+        },
+        toolbox:{
+            show:true,
+            orient:'horizontal', // 布局方式默认为水平布局，可选为：horizontal | vertical
+            left:'right', //left的值可以是像素如:20;也可是百分比如:20%;还可以是:left\center\right
+            top:'top', //top的值可以是像素如:20;也可是百分比如:20%;还可以是:top\middle\bottom
+            //x:'right', // 水平安放位置,默认为全图右对齐,可选: center|left|right|{number}(x坐标，单位px)
+            //y:'top' // 垂直安放位置,默认为全图顶端,可选: center|top|bottom|{number}(x坐标，单位px)
+            color:[''],
+            backgroundColor:'rgba(0,0,0,0)', // 工具箱背景颜色
+            borderColor:'#ccc',  // 工具箱边框颜色
+            borderWidth:0,  // 工具箱边框线宽，单位px,默认为0(无边框)
+            padding:5,  // 工具箱内边距，单位px,默认各方向内边距为5
+            showTitle:true,
+            feature:{
+                mark:{
+                    show:true,
+                    title:{
+                        mark:'辅助线-开关',
+                        markUndo:'辅助线-删除',
+                        markClear:'辅助线-清空'
+                    },
+                    lineStyle:{
+                        width:1,
+                        color:'#1e90ff',
+                        type:'dashed'
+                    }
+                },
+                dataZoom:{
+                    show:true,
+                    title:{
+                        dataZoom:'区域缩放',
+                        dataZoomReset:'区域缩放-后退'
+                    }
+                },
+                dataView:{
+                    show:true,
+                    title:'数据视图',
+                    readOnly:true,
+                    lang:['数据视图','关闭','刷新'],
+                    optionToContent:function (opt) {
+                        console.log(opt);
+                        var axisData = opt.xAxis[0].data;
+                        var series = opt.series;
+                        var table = '<table style="width:100%;text-align"center"><tbody><tr>'
+                                    +'<td>时间</td>'
+                                    + '<td>' + series[0].name + '</td>'
+                                    + '<td>' + series[1].name + '</td>' + '</tr>';
+                        for (var i = 0,l=axisData.length; i<l; i++){
+                            table += '<tr>'
+                                     + '<td>' + axisData[i] + '</td>'
+                                     + '<td>' + series[0].data[i] + '</td>'
+                                     + '<td>' + series[1].data[i] + '</td>' + '</tr>';
+                        }
+                        table += '</tbody></table>';
+                        return table;
+                    }
+                },
+                magicType:{
+                    show:true,
+                    title:{
+                        line:'折线图',
+                        bar:'柱状图',
+                        stack:'堆积',
+                        tiled:'平铺'
+                    },
+                    type:['line','bar','stack','tiled']
+                },
+                restore:{
+                    show:true,
+                    title:'还原',
+                    color:'black'
+                },
+                saveAsImage:{
+                    show:true,
+                    title:'保存图片',
+                    type:'jpeg',
+                    lang:['点击本地保存']
+                }
+            }
+        },
+        calculable:true,
+        dataZoom:{
+            show:true,  // 是否显示数据区域缩放
+            realtime:true,  // 缩放变化是否实时显示
+            start:20,  // 数据缩放选择开始比例，默认为100%
+            end:80  // 数据缩放选择结束比例 默认为100%
+        },
+        xAxis:[
+            {
+                type:'category',
+                boundaryGap:false,
+                data:[]
+            }
+        ],
+        yAxis:[
+            {
+                type:'value'
+            }
+        ],
+        series:[
+            {
+                name:'系统吞吐量',
+                type:'line',
+                data:[]
+            }
+        ]
+    };
+    //将实例化的echarts图表设置图表配置项，同时在DOM中渲染图表显示
+    myChart_reqTime.setOption(option_reqTime);
+    myChart_tps.setOption(option_tps);
+
+
+    </script>
+
+{% endblock %}
