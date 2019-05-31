@@ -823,14 +823,12 @@ def per_data_extract(req):
         per_obj.oncenum += onceNum
     else:
         per_obj.oncenum = maxNum
-    print('此时的并发数为:',onceNum)
+    # print('此时的并发数为:',onceNum)
 
     # 请求头 和 请求体数据处理
     try:
-        print('headers前：',type(per_obj.headers))
         headers = json.loads(per_obj.headers)
         datas = json.loads(per_obj.datas)
-        print('headers后',type(headers))
     except Exception:
         headers = {"Content-Type": "application/json"}
         datas = ''
@@ -873,7 +871,7 @@ def per_data_extract(req):
 
 
             # 将数据存入 前端回调类对象中(这里存在读写消耗)
-            rep.data = [per_obj.success_req,per_obj.lose_req,per_obj.total_req,per_obj.avg_time,per_obj.total_time,per_obj.loop_num]
+            rep.data = [per_obj.success_req,per_obj.lose_req,per_obj.total_req,per_obj.avg_time,per_obj.total_time,per_obj.oncenum]
             rep.message = [per_obj.count_time,per_obj.rps,lti]
             # print(rep.data)
             rep.summary = '运行ing...'

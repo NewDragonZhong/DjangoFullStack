@@ -177,7 +177,6 @@
     </div>
 
 
-    <div class="shadow hide"></div>
     <div class="loading-ico-index loading-ico-top-index hide"  style="margin:-40% 40% 40% 47%;">加载中，请稍候...</div>
 
 </div>
@@ -189,8 +188,6 @@
     <script type="text/javascript">
         $(function () {
             BindTabMenu('#tab-menu-title', '#tab-menu-body');
-
-            BindLoginRegisterDialog();
 
             BindSendMsg();
 
@@ -462,15 +459,6 @@
 
             });
         }
-
-
-        function BindLoginRegisterDialog(){
-            $('#reg_link_a,#login_link_a').click(function(){
-                $('#accountDialog').removeClass('hide');
-                $('.shadow').removeClass('hide');
-            });
-        }
-
 
 
         /* 获取项目名称 和BUG信息的 代码块 */

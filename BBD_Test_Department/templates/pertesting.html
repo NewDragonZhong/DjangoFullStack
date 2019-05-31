@@ -16,7 +16,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>请求次数</th>
+                                        <th>并发个数</th>
                                         <th>成功请求</th>
                                         <th>失败请求</th>
                                         <th>请求总计</th>
@@ -153,14 +153,19 @@
                         // 绘制时间图表
                         reqTime_xAxis.push(_sum[2]);
                         tps_series.push(_sum[1]);
-                        reqTime_series.push(_sum[0]);
+                        once_reqTime_series.push(_sum[0]);
+                        avg_reqTime_series.push(data[3]);
                         myChart_reqTime.setOption({
                             xAxis:{
                                 data:reqTime_xAxis
                             },
                             series:[{
                                     name:'单次请求用时',
-                                    data:reqTime_series
+                                    data:once_reqTime_series
+                                },
+                                    {
+                                    name:'平均请求用时',
+                                    data:avg_reqTime_series
                                 }]
                         });
                         myChart_tps.setOption({
@@ -208,7 +213,8 @@
     // 画图工具初始化
     //定义绘图时的数据容器
     var reqTime_xAxis = [];  // 单次请求用时_横坐标列表  & 与吞吐量共用一个列表
-    var reqTime_series = [];  // 单次请求用时_数据列表
+    var once_reqTime_series = [];  // 单次请求用时_数据列表
+    var avg_reqTime_series = [];  // 平均请求用时_数据列表
     var tps_series = [];    // 吞吐量_数据列表
     // 初始化echarts图表
     var myChart_reqTime = echarts.init(document.getElementById('requestsTime'));
@@ -217,17 +223,17 @@
     var option_reqTime = {
        title:{
             text:"请求用时",
-            subtext:"每轮请求用时"
+            subtext:"单次&平均(s)"
         },
         tooltip:{
             trigger:'axis'
         },
         legend:{
-            data:['单次请求用时']
+            data:['单次请求用时','平均请求用时']
         },
         toolbox:{
             show:true,
-            orient:'horizontal', // 布局方式默认为水平布局，可选为：horizontal | vertical
+            orient:'vertical', // 布局方式默认为水平布局，可选为：horizontal | vertical
             left:'right', //left的值可以是像素如:20;也可是百分比如:20%;还可以是:left\center\right
             top:'top', //top的值可以是像素如:20;也可是百分比如:20%;还可以是:top\middle\bottom
             //x:'right', // 水平安放位置,默认为全图右对齐,可选: center|left|right|{number}(x坐标，单位px)
@@ -329,13 +335,18 @@
                 name:'单次请求用时',
                 type:'line',
                 data:[]
+            },
+            {
+                name:'平均请求用时',
+                type:'line',
+                data:[]
             }
         ]
     };
     var option_tps = {
        title:{
             text:"业务吞吐量",
-            subtext:"每秒处理事物数"
+            subtext:"并发/时间(个)"
         },
         tooltip:{
             trigger:'axis'
@@ -345,7 +356,7 @@
         },
         toolbox:{
             show:true,
-            orient:'horizontal', // 布局方式默认为水平布局，可选为：horizontal | vertical
+            orient:'vertical', // 布局方式默认为水平布局，可选为：horizontal | vertical
             left:'right', //left的值可以是像素如:20;也可是百分比如:20%;还可以是:left\center\right
             top:'top', //top的值可以是像素如:20;也可是百分比如:20%;还可以是:top\middle\bottom
             //x:'right', // 水平安放位置,默认为全图右对齐,可选: center|left|right|{number}(x坐标，单位px)
@@ -446,14 +457,20 @@
             {
                 name:'系统吞吐量',
                 type:'line',
-                data:[]
+                data:[],
+                itemStyle:{
+                    normal:{
+                        lineStyle:{
+                            color:'green'
+                        }
+                    }
+                }
             }
         ]
     };
     //将实例化的echarts图表设置图表配置项，同时在DOM中渲染图表显示
     myChart_reqTime.setOption(option_reqTime);
     myChart_tps.setOption(option_tps);
-
 
     </script>
 

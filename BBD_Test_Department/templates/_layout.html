@@ -164,6 +164,8 @@
     </div>
     </div>
 
+    <div class="shadow hide"></div>
+
     <div class="pg-footer" style="background-color: #eee;">
         <div class="w" style="background-color: #ffffff;">
             <div class="foot-nav">
@@ -196,9 +198,15 @@
                 $('#loginUserNc').removeClass('active');
             });
 
+            BindLoginRegisterDialog();
         });
 
-
+        function BindLoginRegisterDialog(){
+            $('#reg_link_a,#login_link_a').click(function(){
+                $('#accountDialog').removeClass('hide');
+                $('.shadow').removeClass('hide');
+            });
+        }
 
         function CloseDialog(dialog){
             $(dialog).addClass('hide');

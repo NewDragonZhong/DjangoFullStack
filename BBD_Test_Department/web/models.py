@@ -94,7 +94,7 @@ class SpiderProduct(models.Model):
 
 class PertestingTable(models.Model):
     user_info = models.ForeignKey(to='UserInfo', to_field='nid', on_delete=models.CASCADE)
-    method = models.CharField(max_length=32, null=True)
+    method = models.CharField(max_length=32,default='get')
     maxnum = models.IntegerField(max_length=16,default=0)      # 最大并发数
     oncenum = models.IntegerField(max_length=16, default=0)    # 每秒启动的并发数
     hosts = models.CharField(max_length=32,null=True)
