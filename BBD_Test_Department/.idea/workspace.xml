@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="189" column="61" selection-start-line="189" selection-start-column="61" selection-end-line="189" selection-end-column="61" />
+            <state relative-caret-position="-104">
+              <caret line="488" column="31" selection-start-line="488" selection-start-column="21" selection-end-line="488" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -140,29 +140,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-414">
               <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/echarts_case03.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1839">
-              <caret line="155" column="13" lean-forward="true" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2036#2119#0#HTML" />
-                <element signature="e#3215#3484#0#HTML" />
-                <element signature="e#3540#3621#0#HTML" />
-                <element signature="e#3686#3769#0#HTML" />
               </folding>
             </state>
           </provider>
@@ -206,7 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>userOprBox</find>
       <find>.child-nav select</find>
       <find>.child-nav</find>
       <find>act-menu</find>
@@ -236,6 +219,7 @@
       <find>reg_link_a</find>
       <find>shadow</find>
       <find>logout</find>
+      <find>updateItem</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -290,9 +274,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="448" />
-    <option name="y" value="84" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="74" />
     <option name="width" value="1495" />
     <option name="height" value="876" />
   </component>
@@ -328,31 +312,7 @@
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
               <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
               <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-3.3.7-dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
-              <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-3.3.7-dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
-              <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
-              <item name="statics" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
@@ -620,12 +580,12 @@
       <workItem from="1558347055994" duration="17196000" />
       <workItem from="1558430377199" duration="19992000" />
       <workItem from="1558516467440" duration="43456000" />
-      <workItem from="1558919828032" duration="74270000" />
+      <workItem from="1558919828032" duration="76007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="656783000" />
+    <option name="totallyTimeSpent" value="658520000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -637,10 +597,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="448" y="84" width="1495" height="876" extended-state="1" />
+    <frame x="10" y="74" width="1495" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.16794425" />
+      <window_info id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.16794425" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50143266" side_tool="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -652,7 +612,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32792208" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3266129" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21035169" side_tool="true" weight="0.24367817" />
       <window_info anchor="bottom" id="调试" order="12" />
@@ -994,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="189" column="61" selection-start-line="189" selection-start-column="61" selection-end-line="189" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/_layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-576">
@@ -1026,6 +979,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/account.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -1036,13 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-104">
+          <caret line="488" column="31" selection-start-line="488" selection-start-column="21" selection-end-line="488" selection-end-column="31" />
         </state>
       </provider>
     </entry>
