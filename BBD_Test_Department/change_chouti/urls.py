@@ -47,4 +47,5 @@ urlpatterns = [
     url(r'^upload_customFile/$',account.custom_file_upload),
     url(r'^per_data_store/$',account.per_data_store),
     url(r'^per_data_extract/$',account.per_data_extract),
+    url(r'^per_data_clear/$',account.per_data_clear),
 ]

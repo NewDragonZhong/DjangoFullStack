@@ -43,46 +43,67 @@
                     <div class="content-r">
                         <div class="form-group form-group-div">
                             <div class="nav-top-area">
-                                <div class="child-nav" style="margin-bottom: 15px">
-                                    <input type="text" style="margin-left: 10px;width: 100px;height: 33px;text-align:center;font-size:8px;border-radius:4px" class="form-control-per form_info" name="maxNum" placeholder="最大并发数">
-                                    <input type="text" style="margin-left: 29px;width: 100px;height: 33px;text-align:center;font-size:8px;border-radius:4px" class="form-control-per form_info" name="onceNum" placeholder="每次启动并发数">
+                                <div class="child-nav">
+                                    <ul class="nav nav-tabs" style="border-bottom: 0px solid #ddd">
+                                        <li change="contentOne" role="presentation" class="active" onclick="config_func(this)"><a href="#">基本</a></li>
+                                        <li change="contentTow" role="presentation" onclick="config_func(this)" ><a href="#">高级</a></li>
+                                    </ul>
                                 </div>
-                        </div>
+                            </div>
                         <div class="nav-form-area">
-                            <select class="form-control form_info" style="height: 33px;width: 244px;margin-bottom: 15px;" name="reqMethods">
+                            <div id="contentOne">
+                                 <select class="form-control form_info" style="height: 33px;width: 244px;margin-bottom: 15px;" name="reqMethods">
                                         <option value="get">GET</option>
                                         <option value="post">POST</option>
                                         <option value="put">PUT</option>
                                         <option value="delete">DELETE</option>
                                     </select>
-                            <div class="form-group form-group-div-per">
-                                <label for="exampleInputName2">请求地址:</label>
-                                <input type="text" class="form-control form_info" name="hosts" placeholder="例如:http://www.baidu.com" style="width: 244px;">
-                            </div>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">请求地址:</label>
+                                    <input type="text" class="form-control form_info" name="hosts" placeholder="例如:http://www.baidu.com" style="width: 244px;">
+                                </div>
 
-                            <div class="form-group form-group-div-per">
-                                <label for="exampleInputName2">请求路径:</label>
-                                <input type="text" class="form-control form_info" name="paths" placeholder="请输入请求路径">
-                            </div>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">请求路径:</label>
+                                    <input type="text" class="form-control form_info" name="paths" placeholder="请输入请求路径">
+                                </div>
 
-                            <div class="form-group form-group-div-per">
-                                <label for="exampleInputName2">请求头:</label>
-                                <textarea class="form-control form_info" name="headers" placeholder='例如：{"key":"value",...}'></textarea>
-                            </div>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">请求头:</label>
+                                    <textarea class="form-control form_info" name="headers" placeholder='例如：{"key":"value",...}'></textarea>
+                                </div>
 
-                            <div class="form-group form-group-div-per">
-                                <label for="exampleInputName2">请求体:</label>
-                                <textarea class="form-control form_info" name="datas" placeholder='例如：{"key":"value",...}'></textarea>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">请求体:</label>
+                                    <textarea class="form-control form_info" name="datas" placeholder='例如：{"key":"value",...}'></textarea>
+                                </div>
+                            </div>
+                            <div id="contentTow" class="hide">
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">最大并发数:</label>
+                                    <input type="text" style="width: 244px" class="form-control form_info" name="maxNum" placeholder="默认为:10">
+                                </div>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">启动并发数:</label>
+                                    <input type="text" style="width: 244px" class="form-control form_info" name="onceNum" placeholder="默认为:2">
+                                </div>
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">响应时长控制(毫秒):</label>
+                                    <textarea class="form-control form_info" name="xxxx" placeholder='此功能未开发'></textarea>
+                                </div>
+
+                                <div class="form-group form-group-div-per">
+                                    <label for="exampleInputName2">请求断言控制:</label>
+                                    <textarea class="form-control form_info" name="_assert" placeholder='格式：{"include":"包含的字符","outclude":"不包含的字符"}'></textarea>
+                                </div>
+
                             </div>
                         </div>
                         <div class="form-group-submit">
-                            <button type="button" class="btn btn-success glyphicon glyphicon-play-circle"  id="SendRequests" style="width: 100px;margin-left: 83px"> Start </button>
-                                <span class="hide spanSR">
-                                    <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
-                                    <span>请求发送中...</span>
-                                </span>
+                            <button type="button" class="btn btn-success glyphicon glyphicon-play-circle"  id="SendRequests" style="width: 100px;margin-left: 20px">_开始运行 </button>
+                            <button type="button" class="btn btn glyphicon glyphicon-erase btn-info"  id="ClearData" style="width: 100px;margin-left: 20px">_清除数据 </button>
                         </div>
-            </div>
+                        </div>
                     </div>
             </div>
         </div>
@@ -102,7 +123,16 @@
 
         SendRequest();
         SendResponse();
+        ClearData();
     });
+
+    // 配置项切换
+    function config_func(self) {
+        $(self).addClass("active").siblings().removeClass("active");
+        var is = $(self).attr("change");
+        $("#"+is).removeClass("hide").siblings().addClass("hide");
+    }
+
 
     // ajax 发送请求数据到后端 并存储
     function SendRequest() {
@@ -184,7 +214,7 @@
                 });
     }
 
-    // 点击Start Swimming 开始测试并返回数据到客户端
+    // 点击 开始测试并返回数据到客户端
     var time;
     function SendResponse() {
         var num = 1; // 判断点击次数
@@ -192,11 +222,13 @@
             if ($('#action_nav').attr('is-login') == 'true'){
                 if (num%2 == 1){
                     $(this).removeClass('btn-success glyphicon-play-circle').addClass('btn-danger glyphicon-off');
-                    $(this).html(' Stop');
+                    $(this).html('_暂停运行');
+                    $("#ClearData").attr("disabled","disabled").removeClass("btn-info");
                     time = setInterval(req_send,1000); // 进行一个循环 需要用到计时器
                 }else {
                     $(this).removeClass('btn-danger glyphicon-off').addClass('btn-success glyphicon-play-circle');
-                    $(this).html(' Start');
+                    $(this).html('_开始运行');
+                    $("#ClearData").removeAttr("disabled").addClass("btn-info");
                     clearInterval(time)
                 }
                 num += 1;
@@ -208,6 +240,18 @@
         });
     }
 
+    // 点击 清除数据后 清空输入框中的数据
+    function ClearData() {
+        $('#ClearData').click(function () {
+            if ($('#action_nav').attr('is-login') == 'true'){
+                $('.form_info').val("");
+                $.get('/per_data_clear/');
+            } else {
+                $('#accountDialog').removeClass('hide');
+                $('.shadow').removeClass('hide');
+            }
+        });
+    }
 
 
     // 画图工具初始化

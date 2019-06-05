@@ -7,7 +7,7 @@ import time
 
 
 class DataStatistics:
-    def __init__(self,method,url,headers={},data={},count=1,flag=True):
+    def __init__(self,method,url,headers={},data={},count=1,flag=True,assert_dic={}):
         self.method = method
         self.url = url
         self.headers = headers
@@ -23,23 +23,36 @@ class DataStatistics:
         self.countTime = 0
         self.totalTime = 0
         self.flag = flag
+        self.assert_dic = assert_dic
+        self.logic_include = False
+        self.logic_outclude = False
 
-
-
+    # 请求发送 以及 判断的主方法
     def url_req(self):
-        # 任务开始时间
-        self.startTime = time.clock()
+        self.startTime = time.clock() # 任务开始时间
 
         for i in range(self.num):
             self.response = requests.request(method=self.method,url=self.url,headers=self.headers,json=self.data,verify=self.flag)
 
-            if self.response.status_code == 200 :
-                # response_json = json.loads(response.text)
-                self.req_success += 1
-                # print('响应信息为：',response_json)
+            if self.assert_dic == {}:   # 判断用户 是否使用了 控制断言
+                if self.response.status_code == 200:
+                    self.req_success += 1
+                else:
+                    print('响应的状态码：', self.response.status_code)
+                    self.req_lose += 1
             else:
-                print('响应的状态码：',self.response.status_code)
-                self.req_lose += 1
+                self.response.encoding = 'utf-8'  # 设置返回体的编码格式 默认为utf-8
+                try:
+                    self.logic_include = self.assert_dic['include'] in self.response.text
+                    self.logic_outclude = self.assert_dic['outclude'] not in self.response.text
+                except KeyError as e:
+                    print('输入的键不存在！')
+                finally:
+                    if self.response.status_code == 200 and self.logic_include or self.logic_outclude :
+                        self.req_success += 1
+                    else:
+                        print('响应的状态码：',self.response.status_code)
+                        self.req_lose += 1
 
         if self.response is None:
             self.req_lose += 1
@@ -53,13 +66,13 @@ class DataStatistics:
 
         self.data_list.append((self.req_success, self.req_lose,self.totalTime,self.countTime))
 
-
+    # 协程发送方法
     def together_send(self):
         gevent.joinall([
             gevent.spawn(self.url_req),
         ])
 
-
+    # 取数方法
     def data_response(self):
 
         return self.data_list.pop(-1)

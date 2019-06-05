@@ -491,6 +491,7 @@
                 if ($('#action_nav').attr('is-login') == 'true') {
                     $('.shadow').removeClass('hide');   // 点击后选择禅道版本号
                     $('.modal-dialog-zentao').removeClass('hide'); //弹出禅道对话框
+                    $(this).addClass('btn disabled'); // 防止二次点击
 
                 } else {
                     $('#accountDialog').removeClass('hide');

@@ -1418,3 +1418,13 @@ textarea.txt-huifu-top:focus{
     left: 5px;
     cursor: pointer;
 }
+
+
+/*性能测试配置选项样式*/
+.menu_config {
+    line-height: 29px;
+}
+
+.menu_config li {
+    font-size: 13px
+}

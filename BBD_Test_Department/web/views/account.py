@@ -789,6 +789,8 @@ def per_data_store(req):
             per_obj.headers = labelValue
         elif labelName == 'datas':
             per_obj.datas = labelValue
+        elif labelName == '_assert':
+            per_obj.assert_dic = labelValue
     per_obj.save()
 
     return HttpResponse("OK!")
@@ -825,17 +827,30 @@ def per_data_extract(req):
         per_obj.oncenum = maxNum
     # print('此时的并发数为:',onceNum)
 
-    # 请求头 和 请求体数据处理
+    # 请求头进行预处理
     try:
         headers = json.loads(per_obj.headers)
-        datas = json.loads(per_obj.datas)
+
     except Exception:
         headers = {"Content-Type": "application/json"}
+
+    # 请求体进行预处理
+    try:
+        datas = json.loads(per_obj.datas)
+    except Exception:
         datas = ''
+
+    # 请求断言进行预处理
+    try:
+        assert_dic = json.loads(per_obj.assert_dic)  # 对断言数据进行预处理
+    except Exception:
+        assert_dic = {}
+
 
 
     # 将表中的数据 初始化到 数据统计类中
-    ds = DataStatistics(method=per_obj.method, url=url, headers=headers, data=datas, count=onceNum,flag=flag)
+    ds = DataStatistics(method=per_obj.method, url=url, headers=headers,
+                        data=datas, count=onceNum,flag=flag,assert_dic=assert_dic)
 
 
     if req.method == 'POST':
@@ -882,3 +897,18 @@ def per_data_extract(req):
 
 
     return HttpResponse(json.dumps(rep.__dict__))
+
+
+
+def per_data_clear(req):
+    user_info = req.session['user_info']
+    u_nid = user_info['nid']
+
+    obj_data = models.PertestingTable.objects
+
+    # 删除记录之后 再创建
+    obj_data.get(user_info_id=u_nid).delete()
+
+    obj_data.create(user_info_id=u_nid)
+
+    return HttpResponse("OK!")

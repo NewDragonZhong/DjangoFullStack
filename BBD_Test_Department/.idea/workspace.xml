@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
+            <state relative-caret-position="333">
+              <caret line="101" column="46" lean-forward="true" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
               <folding>
                 <element signature="e#825#1571#0" />
               </folding>
@@ -79,11 +79,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+              <folding>
+                <element signature="e#640#672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104">
-              <caret line="488" column="31" selection-start-line="488" selection-start-column="21" selection-end-line="488" selection-end-column="31" />
+            <state relative-caret-position="40">
+              <caret line="466" column="45" lean-forward="true" selection-start-line="466" selection-start-column="45" selection-end-line="466" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -91,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/_layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-576">
-              <caret line="163" column="10" lean-forward="true" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
+            <state relative-caret-position="356">
+              <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
               <folding>
                 <element signature="e#9704#11032#0#HTML" />
                 <element signature="e#11107#12454#0#HTML" />
@@ -101,16 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/news.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_pertestingtable">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -122,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/utils/perTesting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="257">
+              <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -131,10 +134,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/account.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="873" column="87" selection-start-line="873" selection-start-column="87" selection-end-line="873" selection-end-column="87" />
+            <state relative-caret-position="101">
+              <caret line="848" selection-start-line="848" selection-end-line="848" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#22382#23379#0" />
               </folding>
             </state>
           </provider>
@@ -143,7 +147,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-414">
+            <state relative-caret-position="-684">
               <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
@@ -155,25 +159,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pertesting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+            <state relative-caret-position="492">
+              <caret line="246" column="29" lean-forward="true" selection-start-line="246" selection-start-column="29" selection-end-line="246" selection-end-column="29" />
               <folding>
+                <element signature="e#335#1859#0#HTML" />
                 <element signature="e#1541#1617#0#HTML" expanded="true" />
                 <element signature="e#1698#1774#0#HTML" expanded="true" />
-                <element signature="e#1942#1969#0#HTML" expanded="true" />
-                <element signature="e#2435#2535#0#HTML" expanded="true" />
-                <element signature="e#2230#2330#0#HTML" expanded="true" />
-                <element signature="e#2401#2452#0#HTML" expanded="true" />
-                <element signature="e#2362#2817#0#HTML" />
-                <element signature="e#4034#4542#0#HTML" />
+                <element signature="e#2004#2041#0#HTML" expanded="true" />
+                <element signature="e#1979#2372#0#HTML" />
+                <element signature="e#2582#2655#0#HTML" />
+                <element signature="e#2660#2714#0#HTML" expanded="true" />
+                <element signature="e#2621#3079#0#HTML" />
+                <element signature="e#4721#4822#0#HTML" expanded="true" />
+                <element signature="e#5147#5167#0#HTML" expanded="true" />
+                <element signature="e#4191#4229#0#HTML" expanded="true" />
+                <element signature="e#5305#5343#0#HTML" expanded="true" />
                 <element signature="e#5113#5981#0#HTML" />
+                <element signature="e#6035#6944#0#HTML" />
+                <element signature="e#6637#7081#0#HTML" />
                 <element signature="e#11982#12163#0#HTML" />
                 <element signature="e#7543#7724#0#HTML" />
-                <element signature="e#7026#7789#0#HTML" />
                 <element signature="e#9600#13799#0#HTML" />
                 <element signature="e#11162#12313#0#HTML" />
                 <element signature="e#13733#17722#0#HTML" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="383" column="1" lean-forward="true" selection-start-line="383" selection-start-column="1" selection-end-line="383" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -190,17 +208,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.child-nav select</find>
-      <find>.child-nav</find>
-      <find>act-menu</find>
-      <find>BindTabMenu</find>
-      <find>CreateReport</find>
       <find>productItem</find>
       <find>作者姓名</find>
       <find>authorName</find>
       <find>modal-btn-confir</find>
       <find>modal_info</find>
-      <find>form_info</find>
       <find>radio</find>
       <find>action_nav</find>
       <find>index_tr</find>
@@ -216,10 +228,16 @@
       <find>file_upload</find>
       <find>upload_customFile</find>
       <find>login-btn-a</find>
-      <find>reg_link_a</find>
       <find>shadow</find>
+      <find>更新</find>
+      <find>.menu_config</find>
+      <find>form_info</find>
+      <find>form-info</find>
       <find>logout</find>
       <find>updateItem</find>
+      <find>nav-top-area</find>
+      <find>reg_link_a</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -252,11 +270,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b0734e0f-845b-45a8-a9de-008ca8e3c660/console.sql" />
         <option value="$USER_HOME$/Desktop/BeiJinBank_IndexTest.py" />
         <option value="$PROJECT_DIR$/statics/css/newmons.css" />
-        <option value="$PROJECT_DIR$/statics/css/commons.css" />
         <option value="$PROJECT_DIR$/statics/css/pertestingmons.css" />
         <option value="$PROJECT_DIR$/perTesting.py" />
         <option value="$PROJECT_DIR$/web/views/home.py" />
-        <option value="$PROJECT_DIR$/change_chouti/urls.py" />
         <option value="$PROJECT_DIR$/templates/test_comment.html" />
         <option value="$PROJECT_DIR$/templates/test-echarts02.html" />
         <option value="$PROJECT_DIR$/templates/test.html" />
@@ -264,21 +280,23 @@
         <option value="$PROJECT_DIR$/templates/echarts_case02.html" />
         <option value="$PROJECT_DIR$/templates/echarts_case03.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/web/views/account.py" />
-        <option value="$PROJECT_DIR$/backend/utils/perTesting.py" />
-        <option value="$PROJECT_DIR$/web/models.py" />
-        <option value="$PROJECT_DIR$/templates/pertesting.html" />
+        <option value="$PROJECT_DIR$/templates/news.html" />
         <option value="$PROJECT_DIR$/templates/_layout.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/news.html" />
+        <option value="$PROJECT_DIR$/statics/css/commons.css" />
+        <option value="$PROJECT_DIR$/change_chouti/urls.py" />
+        <option value="$PROJECT_DIR$/templates/pertesting.html" />
+        <option value="$PROJECT_DIR$/backend/utils/perTesting.py" />
+        <option value="$PROJECT_DIR$/web/views/account.py" />
+        <option value="$PROJECT_DIR$/web/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="74" />
-    <option name="width" value="1495" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1631" />
+    <option name="height" value="814" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -307,6 +325,12 @@
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
               <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
               <item name="statics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="statics" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
@@ -580,12 +604,12 @@
       <workItem from="1558347055994" duration="17196000" />
       <workItem from="1558430377199" duration="19992000" />
       <workItem from="1558516467440" duration="43456000" />
-      <workItem from="1558919828032" duration="76007000" />
+      <workItem from="1558919828032" duration="106379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="658520000" />
+    <option name="totallyTimeSpent" value="688892000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,10 +621,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="74" width="1495" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.16794425" />
+      <window_info id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50143266" side_tool="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -612,7 +635,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32792208" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.2801303" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7896483" visible="true" weight="0.20454545" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3266129" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.21035169" side_tool="true" weight="0.24367817" />
       <window_info anchor="bottom" id="调试" order="12" />
@@ -797,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="490" column="21" lean-forward="true" selection-start-line="490" selection-start-column="21" selection-end-line="490" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -829,16 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,36 +919,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="97" column="68" selection-start-line="97" selection-start-column="68" selection-end-line="97" selection-end-column="68" />
+        <state relative-caret-position="-1740">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
           <folding>
-            <element signature="e#825#1571#0" />
+            <element signature="e#640#672#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="466" column="45" lean-forward="true" selection-start-line="466" selection-start-column="45" selection-end-line="466" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="383" column="1" lean-forward="true" selection-start-line="383" selection-start-column="1" selection-end-line="383" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pertesting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+        <state relative-caret-position="492">
+          <caret line="246" column="29" lean-forward="true" selection-start-line="246" selection-start-column="29" selection-end-line="246" selection-end-column="29" />
           <folding>
+            <element signature="e#335#1859#0#HTML" />
             <element signature="e#1541#1617#0#HTML" expanded="true" />
             <element signature="e#1698#1774#0#HTML" expanded="true" />
-            <element signature="e#1942#1969#0#HTML" expanded="true" />
-            <element signature="e#2435#2535#0#HTML" expanded="true" />
-            <element signature="e#2230#2330#0#HTML" expanded="true" />
-            <element signature="e#2401#2452#0#HTML" expanded="true" />
-            <element signature="e#2362#2817#0#HTML" />
-            <element signature="e#4034#4542#0#HTML" />
+            <element signature="e#2004#2041#0#HTML" expanded="true" />
+            <element signature="e#1979#2372#0#HTML" />
+            <element signature="e#2582#2655#0#HTML" />
+            <element signature="e#2660#2714#0#HTML" expanded="true" />
+            <element signature="e#2621#3079#0#HTML" />
+            <element signature="e#4721#4822#0#HTML" expanded="true" />
+            <element signature="e#5147#5167#0#HTML" expanded="true" />
+            <element signature="e#4191#4229#0#HTML" expanded="true" />
+            <element signature="e#5305#5343#0#HTML" expanded="true" />
             <element signature="e#5113#5981#0#HTML" />
+            <element signature="e#6035#6944#0#HTML" />
+            <element signature="e#6637#7081#0#HTML" />
             <element signature="e#11982#12163#0#HTML" />
             <element signature="e#7543#7724#0#HTML" />
-            <element signature="e#7026#7789#0#HTML" />
             <element signature="e#9600#13799#0#HTML" />
             <element signature="e#11162#12313#0#HTML" />
             <element signature="e#13733#17722#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/perTesting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="e#9704#11032#0#HTML" />
+            <element signature="e#11107#12454#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="848" selection-start-line="848" selection-end-line="848" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#22382#23379#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="101" column="46" lean-forward="true" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
+          <folding>
+            <element signature="e#825#1571#0" />
           </folding>
         </state>
       </provider>
@@ -951,58 +1032,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="163" column="10" lean-forward="true" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="10" />
-          <folding>
-            <element signature="e#9704#11032#0#HTML" />
-            <element signature="e#11107#12454#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/utils/perTesting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/utils/create_word.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="873" column="87" selection-start-line="873" selection-start-column="87" selection-end-line="873" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="488" column="31" selection-start-line="488" selection-start-column="21" selection-end-line="488" selection-end-column="31" />
         </state>
       </provider>
     </entry>
