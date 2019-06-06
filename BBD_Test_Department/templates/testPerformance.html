@@ -32,6 +32,7 @@
                                         <th>0</th>
                                         <th>0</th>
                                         <th>0</th>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -88,13 +89,13 @@
                                     <input type="text" style="width: 244px" class="form-control form_info" name="onceNum" placeholder="默认为:2">
                                 </div>
                                 <div class="form-group form-group-div-per">
-                                    <label for="exampleInputName2">响应时长控制(毫秒):</label>
-                                    <textarea class="form-control form_info" name="xxxx" placeholder='此功能未开发'></textarea>
+                                    <label for="exampleInputName2">响应时长控制(秒):</label>
+                                    <input type="text" style="width: 244px" class="form-control form_info" name="maxTime" placeholder="默认为:6">
                                 </div>
 
                                 <div class="form-group form-group-div-per">
                                     <label for="exampleInputName2">请求断言控制:</label>
-                                    <textarea class="form-control form_info" name="_assert" placeholder='格式：{"include":"包含的字符","outclude":"不包含的字符"}'></textarea>
+                                    <textarea class="form-control form_info" name="_assert" placeholder='格式：{"include":"包含的字符"} 或 {"outclude":"不包含的字符"}'></textarea>
                                 </div>
 
                             </div>
@@ -119,7 +120,7 @@
     <script type="text/javascript">
     $(function () {
         BindTabMenu('#tab-menu-title', '#tab-menu-body');
-        $('.act-menu').children().eq(2).addClass('active');
+        $('.act-menu').children().eq(1).addClass('active');
 
         SendRequest();
         SendResponse();
@@ -223,11 +224,13 @@
                 if (num%2 == 1){
                     $(this).removeClass('btn-success glyphicon-play-circle').addClass('btn-danger glyphicon-off');
                     $(this).html('_暂停运行');
+                    $(".form_info").attr("disabled","disabled");
                     $("#ClearData").attr("disabled","disabled").removeClass("btn-info");
                     time = setInterval(req_send,1000); // 进行一个循环 需要用到计时器
                 }else {
                     $(this).removeClass('btn-danger glyphicon-off').addClass('btn-success glyphicon-play-circle');
                     $(this).html('_开始运行');
+                    $(".form_info").removeAttr("disabled","disabled");
                     $("#ClearData").removeAttr("disabled").addClass("btn-info");
                     clearInterval(time)
                 }
@@ -244,7 +247,15 @@
     function ClearData() {
         $('#ClearData').click(function () {
             if ($('#action_nav').attr('is-login') == 'true'){
-                $('.form_info').val("");
+                $('.form_info').val("");    // 清楚文本框中的数字
+                $('tbody tr th').text(0);   // 清楚表格中的数字
+                // 清除图表中的数字
+                reqTime_xAxis.splice(0,reqTime_xAxis.length);
+                once_reqTime_series.splice(0,once_reqTime_series.length);
+                avg_reqTime_series.splice(0,avg_reqTime_series.length);
+                tps_series.splice(0,tps_series.length);
+
+                // 删除数据库中的内容
                 $.get('/per_data_clear/');
             } else {
                 $('#accountDialog').removeClass('hide');

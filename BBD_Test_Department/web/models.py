@@ -114,4 +114,5 @@ class PertestingTable(models.Model):
     rps = models.FloatField(max_length=16,default=0.0)  # 每秒处理的事务数
 
     assert_dic = models.CharField(max_length=128)  # 存储断言请求值
+    maxTime = models.IntegerField(max_length=8, default=6)  # 存储允许的最大响应时间
     ctime = models.DateTimeField(auto_now_add=True)

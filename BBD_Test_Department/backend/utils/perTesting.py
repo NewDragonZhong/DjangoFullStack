@@ -7,7 +7,7 @@ import time
 
 
 class DataStatistics:
-    def __init__(self,method,url,headers={},data={},count=1,flag=True,assert_dic={}):
+    def __init__(self,method,url,headers={},data={},count=1,flag=True,assert_dic={},maxTime=6):
         self.method = method
         self.url = url
         self.headers = headers
@@ -24,8 +24,10 @@ class DataStatistics:
         self.totalTime = 0
         self.flag = flag
         self.assert_dic = assert_dic
-        self.logic_include = False
-        self.logic_outclude = False
+        self.logic_include = False  # 逻辑开关 包含的字符
+        self.logic_outclude = False # 逻辑开关 不包含的字符
+        self.maxTime = maxTime
+
 
     # 请求发送 以及 判断的主方法
     def url_req(self):
@@ -61,6 +63,11 @@ class DataStatistics:
 
         # 计算出每次请求消耗的时间
         self.countTime = self.endTime - self.startTime
+        # 如果响应的时效大于用户设置的时效则 认为请求失败
+        if self.countTime > self.maxTime:
+            self.req_success -= self.num
+            self.req_lose += self.num
+
         # 计算消耗的总时间
         self.totalTime +=  self.countTime
 

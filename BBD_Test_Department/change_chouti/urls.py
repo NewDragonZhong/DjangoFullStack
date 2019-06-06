@@ -37,9 +37,9 @@ urlpatterns = [
     # url(r'^show/$', home.show),
     # url(r'^test_upload/$', home.test_upload),
 
-    url(r'^pertesting/$',home.perTesting),
-    url(r'^news/([0-9]*)', home.news),
-    url(r'^index/([0-9]*)', home.index),
+    url(r'^performance/$',home.testPerformance),
+    url(r'^index/([0-9]*)', home.testForum),
+    url(r'^report/([0-9]*)', home.testReport),
     url(r'^modal_info/$', account.modal_info),
     url(r'^update_item/$', account.update_item),
     url(r'^creat_report/$', account.creat_report),

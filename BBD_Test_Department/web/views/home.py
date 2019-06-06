@@ -19,8 +19,8 @@ from backend import commons
 
 
 
-# 新闻页面 主函数
-def news(request,page):
+# 论坛页面 主函数
+def testForum(request,page):
     """
         主页
     :param request:
@@ -37,12 +37,26 @@ def news(request,page):
         str_news = models.News.objects.all().values()[pagin.start:pagin.end]
 
 
-        return render(request, 'news.html', {'news_list': str_news, 'pagin':pagin})
+        return render(request, 'testForum.html', {'news_list': str_news, 'pagin':pagin})
+
+
+
+
+# 性能测试主函数
+def testPerformance(request):
+    """
+    将前端发来的数据进行处理，并且返回给前端需要的数据
+    :param request:
+    :return:
+    """
+
+    return render(request,'testPerformance.html',{})
+
 
 
 
 # 报告页面 主函数
-def index(request,page):
+def testReport(request,page):
     """
         测试报告发送主页
     :param request:
@@ -57,19 +71,7 @@ def index(request,page):
         str_news = models.News.objects.all().values()[pagin.start:pagin.end]
 
 
-        return render(request, 'index.html', {'news_list': str_news, 'pagin':pagin})
-
-
-# 性能测试主函数
-def perTesting(request):
-    """
-    将前端发来的数据进行处理，并且返回给前端需要的数据
-    :param request:
-    :return:
-    """
-
-
-    return render(request,'pertesting.html',{})
+        return render(request, 'testReport.html', {'news_list': str_news, 'pagin':pagin})
 
 
 

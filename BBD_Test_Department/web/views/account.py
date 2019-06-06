@@ -696,16 +696,16 @@ def creat_report(req):
         emailCount = obj_ri.emailContent
         email_list = cw.buffer_func(obj_ri.emailList)
 
-        print('email_list:',email_list)
-        print('email_list_type:', type(email_list))
+        # print('email_list:',email_list)
+        # print('email_list_type:', type(email_list))
 
 
         authorEmail = '%s@bbdservice.com' % u_name
         rep.message = "报告发送成功！"
         rep.status = True
 
-        print('authorEmail:',authorEmail)
-        print('ePassword:',ePassword)
+        # print('authorEmail:',authorEmail)
+        # print('ePassword:',ePassword)
 
         email_report(filePath, emailCount, email_list,authorEmail=authorEmail,ePassword=ePassword)
     return HttpResponse(json.dumps(rep.__dict__))
@@ -791,6 +791,8 @@ def per_data_store(req):
             per_obj.datas = labelValue
         elif labelName == '_assert':
             per_obj.assert_dic = labelValue
+        elif labelName == 'maxTime':
+            per_obj.maxTime = labelValue
     per_obj.save()
 
     return HttpResponse("OK!")
@@ -846,11 +848,13 @@ def per_data_extract(req):
     except Exception:
         assert_dic = {}
 
+    maxTime = per_obj.maxTime  # 接口响应的最大时间
+
 
 
     # 将表中的数据 初始化到 数据统计类中
     ds = DataStatistics(method=per_obj.method, url=url, headers=headers,
-                        data=datas, count=onceNum,flag=flag,assert_dic=assert_dic)
+                        data=datas, count=onceNum,flag=flag,assert_dic=assert_dic,maxTime=maxTime)
 
 
     if req.method == 'POST':
@@ -869,8 +873,8 @@ def per_data_extract(req):
             per_obj.avg_time = per_obj.total_time / per_obj.loop_num  # 平均花销的时间
 
             # 以下数据 属于图表使用
-            per_obj.count_time = data[3]
-            per_obj.rps= onceNum / per_obj.avg_time
+            per_obj.count_time = data[3]     # 每次请求用时
+            per_obj.rps= onceNum / data[3]   # 每次的并发数 / 每次请求用时
             # 保存数据入库
             per_obj.save()
 
