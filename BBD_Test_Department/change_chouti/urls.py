@@ -48,4 +48,5 @@ urlpatterns = [
     url(r'^per_data_store/$',account.per_data_store),
     url(r'^per_data_extract/$',account.per_data_extract),
     url(r'^per_data_clear/$',account.per_data_clear),
+    url(r'^servers_info_extract/$',account.servers_info_extract),
 ]

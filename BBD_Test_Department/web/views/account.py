@@ -1,4 +1,5 @@
 from backend.utils.perTesting import DataStatistics
+from backend.utils.servers_info import servers
 import io,json,datetime
 from django.shortcuts import HttpResponse,render,redirect
 from django.db.models import F
@@ -204,6 +205,11 @@ def login(req):
         if not obj_ri:
             models.PertestingTable.objects.create(user_info_id=obj.nid)
 
+        # 查询 PertestingServersTable 数据中 有没有该数据
+        obj_ri = models.PertestingServersTable.objects.filter(user_info_id=obj.nid).first()
+        if not obj_ri:
+            models.PertestingServersTable.objects.create(user_info_id=obj.nid)
+
     else:
         error_msg = form.errors.as_json()
         rep.message = json.loads(error_msg)
@@ -223,6 +229,7 @@ def logout(req):
 
     # 清除记录 性能测试表的数据
     models.PertestingTable.objects.get(user_info_id=u_nid).delete()
+    models.PertestingServersTable.objects.get(user_info_id=u_nid).delete()
 
     req.session.clear()
     return redirect('/index/')
@@ -768,6 +775,7 @@ def per_data_store(req):
 
     # 拿取该表对象
     per_obj = models.PertestingTable.objects.get(user_info_id=u_nid)
+    ser_obj = models.PertestingServersTable.objects.get(user_info_id=u_nid)
 
 
     if req.method == 'POST':
@@ -793,10 +801,18 @@ def per_data_store(req):
             per_obj.assert_dic = labelValue
         elif labelName == 'maxTime':
             per_obj.maxTime = labelValue
+        elif labelName == 'server_add' and labelValue != '':
+            ser_obj.server_add = labelValue
+        elif labelName == 'server_port' and labelValue != '':
+            ser_obj.server_port = labelValue
+        elif labelName == 'server_username' and labelValue != '':
+            ser_obj.server_username = labelValue
+        elif labelName == 'server_password' and labelValue != '':
+            ser_obj.server_password = labelValue
+    ser_obj.save()
     per_obj.save()
 
     return HttpResponse("OK!")
-
 
 
 def per_data_extract(req):
@@ -897,22 +913,63 @@ def per_data_extract(req):
         except (IndexError):
             rep.status = False
             rep.data = []
-            rep.summary = '运行错误！接口请求失败。'
+            rep.summary = '运行错误！per_data_extract 接口请求失败。'
 
 
     return HttpResponse(json.dumps(rep.__dict__))
 
+
+def servers_info_extract(req):
+    rep = BaseResponse()  # 创建 回调类对象
+    user_info = req.session['user_info']  # 从session中拿取 用户ID
+    u_nid = user_info['nid']
+
+    # 拿取该表对象
+    ser_obj = models.PertestingServersTable.objects.get(user_info_id=u_nid)
+
+    # 实例化服务器对象
+    ser = servers(ser_obj.server_add,ser_obj.server_port,ser_obj.server_username,ser_obj.server_password)
+
+    try:
+        res_mem,res_sys = ser.info_dispose()
+        # 计算内存占用比
+        ser_obj.memory_used_per = (int(res_mem['used']) / int(res_mem['total'])) * 100
+        # 计算系统负债的情况
+        ser_obj.sysLoad_time = res_sys[0]
+        ser_obj.sysLoad_runTime = res_sys[2] + res_sys[3].replace(",","")
+        ser_obj.sysLoad_userNum = res_sys[5].replace(",","")
+        ser_obj.sysLoad_loadLevel_1min = res_sys[9].replace(",","")
+        ser_obj.sysLoad_loadLevel_5min = res_sys[10].replace(",","")
+        ser_obj.sysLoad_loadLevel_15min = res_sys[11].replace("\n","")
+        ser_obj.save()
+
+        rep.status  = True
+        rep.data = [ser_obj.sysLoad_time,ser_obj.sysLoad_runTime,ser_obj.sysLoad_userNum]
+        rep.message = [ser_obj.memory_used_per,ser_obj.sysLoad_loadLevel_1min,ser_obj.sysLoad_loadLevel_5min,ser_obj.sysLoad_loadLevel_15min]
+    except Exception as e:
+        print('错误内容：',e)
+        rep.status = False
+        rep.data = []
+        rep.message = []
+        rep.summary = '运行错误！servers_info_extract 接口请求失败。'
+    finally:
+        ser.server_linke_close()
+
+    return HttpResponse(json.dumps(rep.__dict__))
 
 
 def per_data_clear(req):
     user_info = req.session['user_info']
     u_nid = user_info['nid']
 
-    obj_data = models.PertestingTable.objects
+    per_data = models.PertestingTable.objects
+    servers_data = models.PertestingServersTable.objects
 
     # 删除记录之后 再创建
-    obj_data.get(user_info_id=u_nid).delete()
+    per_data.get(user_info_id=u_nid).delete()
+    servers_data.get(user_info_id=u_nid).delete()
 
-    obj_data.create(user_info_id=u_nid)
+    per_data.create(user_info_id=u_nid)
+    servers_data.create(user_info_id=u_nid)
 
     return HttpResponse("OK!")

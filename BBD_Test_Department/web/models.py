@@ -116,3 +116,22 @@ class PertestingTable(models.Model):
     assert_dic = models.CharField(max_length=128)  # 存储断言请求值
     maxTime = models.IntegerField(max_length=8, default=6)  # 存储允许的最大响应时间
     ctime = models.DateTimeField(auto_now_add=True)
+
+
+
+class PertestingServersTable(models.Model):
+    user_info = models.ForeignKey(to='UserInfo',to_field='nid',on_delete=models.CASCADE)
+    # 服务器的登录信息
+    server_add = models.CharField(max_length=32)
+    server_port = models.IntegerField(max_length=16,default=22)
+    server_username = models.CharField(max_length=32)
+    server_password = models.CharField(max_length=32)
+    # 记录服务的信息 --------**内存使用量**--------
+    memory_used_per = models.CharField(max_length=16)  # 已经使用了的百分比
+    # 记录服务的信息 --------**系统负债信息**--------
+    sysLoad_time = models.CharField(max_length=16)  # 当前的服务器时间
+    sysLoad_runTime = models.CharField(max_length=16)  # 当前服务器的运行时长
+    sysLoad_userNum = models.CharField(max_length=16)  # 当前用户数
+    sysLoad_loadLevel_1min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
+    sysLoad_loadLevel_5min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
+    sysLoad_loadLevel_15min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
