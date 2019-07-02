@@ -26,6 +26,9 @@ class CreateWord:
         # print("--------******--------")
         # print(type(json.loads(json.dumps(eval(self.obj_mi.equ_env)))))
 
+    def return_fileName(self):
+        return self.resultFile_path
+
 
     def buffer_func(self,data):
         result = json.loads(data.replace('"',' ').replace("'",'"'))

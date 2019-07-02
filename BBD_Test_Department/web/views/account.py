@@ -82,6 +82,33 @@ def send_msg(req):
     return HttpResponse(json.dumps(rep.__dict__))   # 返回时 把状态信息转换成json格式返回给前端
 
 
+# 登录和注册之后的表验证
+def table_verify(obj):
+    # 查询 ModalInfo 数据库中 有没有该数据
+    obj_mi = models.ModalInfo.objects.filter(user_info_id=obj.nid).first()
+    if not obj_mi:
+        models.ModalInfo.objects.create(user_info_id=obj.nid)
+
+    # 查询 spidertable 数据中 有没有该数据
+    obj_st = models.SpiderTable.objects.filter(user_info_id=obj.nid).first()
+    if not obj_st:
+        models.SpiderTable.objects.create(user_info_id=obj.nid)
+
+    # 查询 reportInfo 数据中 有没有该数据
+    obj_ri = models.ReportInfo.objects.filter(user_info_id=obj.nid).first()
+    if not obj_ri:
+        models.ReportInfo.objects.create(user_info_id=obj.nid)
+
+    # 查询 pertestingtable 数据中 有没有该数据
+    obj_pt = models.PertestingTable.objects.filter(user_info_id=obj.nid).first()
+    if not obj_pt:
+        models.PertestingTable.objects.create(user_info_id=obj.nid)
+
+    # 查询 PertestingServersTable 数据中 有没有该数据
+    obj_pst = models.PertestingServersTable.objects.filter(user_info_id=obj.nid).first()
+    if not obj_pst:
+        models.PertestingServersTable.objects.create(user_info_id=obj.nid)
+
 
 def register(req):
     '''
@@ -93,7 +120,7 @@ def register(req):
     form = RegisterForm(req.POST)
     if form.is_valid():
         current_date = datetime.datetime.now()                      # 创建时间
-        limit_day = current_date - datetime.timedelta(minutes=1)    # 一分钟
+        limit_day = current_date - datetime.timedelta(minutes=1)    # 一分钟 (判断验证码是否过期)
         _value_dict = form.clean()
         # 临时表中查询时间超过1分钟的数据
         is_valid_code = models.SendMsg.objects.filter(email=_value_dict['email'],
@@ -131,11 +158,13 @@ def register(req):
         req.session['user_info'] = user_info_dict
         rep.status = True
 
+        # 表检查
+        table_verify(obj)
+
     else:
         error_msg = form.errors.as_json()
         rep.message = json.loads(error_msg)
     return HttpResponse(json.dumps(rep.__dict__))
-
 
 
 def login(req):
@@ -184,38 +213,13 @@ def login(req):
         req.session['user_info'] = {'nid':obj.nid,'email':obj.email,'username':obj.username}
 
         rep.status = True
-
-        # 查询 ModalInfo 数据库中 有没有该数据
-        obj_mi = models.ModalInfo.objects.filter(user_info_id=obj.nid).first()
-        if not obj_mi:
-            models.ModalInfo.objects.create(user_info_id=obj.nid)
-
-        # 查询 spidertable 数据中 有没有该数据
-        obj_st = models.SpiderTable.objects.filter(user_info_id=obj.nid).first()
-        if not obj_st:
-            models.SpiderTable.objects.create(user_info_id=obj.nid)
-
-        # 查询 reportInfo 数据中 有没有该数据
-        obj_ri = models.ReportInfo.objects.filter(user_info_id=obj.nid).first()
-        if not obj_ri:
-            models.ReportInfo.objects.create(user_info_id=obj.nid)
-
-        # 查询 pertestingtable 数据中 有没有该数据
-        obj_ri = models.PertestingTable.objects.filter(user_info_id=obj.nid).first()
-        if not obj_ri:
-            models.PertestingTable.objects.create(user_info_id=obj.nid)
-
-        # 查询 PertestingServersTable 数据中 有没有该数据
-        obj_ri = models.PertestingServersTable.objects.filter(user_info_id=obj.nid).first()
-        if not obj_ri:
-            models.PertestingServersTable.objects.create(user_info_id=obj.nid)
-
+        # 表检查
+        table_verify(obj)
     else:
         error_msg = form.errors.as_json()
         rep.message = json.loads(error_msg)
 
     return HttpResponse(json.dumps(rep.__dict__))
-
 
 
 def logout(req):
@@ -672,6 +676,7 @@ def creat_report(req):
     :param req:
     :return:
     '''
+    global filePath
     rep = BaseResponse()
     user_info = req.session['user_info']
     u_nid = user_info['nid']
@@ -679,13 +684,13 @@ def creat_report(req):
     ePassword = models.UserInfo.objects.get(nid=u_nid).password
     headLine = req.POST.get('itemName')
     cw = CreateWord(u_nid, headLine)
+    filePath = cw.return_fileName() # 获取全路径的文件名
 
-    global filePath
 
     rep.status = True
     if req.method == "POST":
         try:
-            filePath = cw.create_word() # 获取文档路径
+            cw.create_word() # 获取文档路径
             rep.message = "word生成成功！"
             rep.summary = "操作成功！"
             rep.status = True
