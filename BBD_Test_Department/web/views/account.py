@@ -7,12 +7,14 @@ from django.db.models import F
 from web.forms.account import SendMsgForm,RegisterForm,LoginForm
 from web import models
 
+import xlrd
 from backend.utils.response import BaseResponse
 from backend.utils import check_code as CheckCode
 from backend import commons
 from backend.utils.message import email as send_email,email_report
 from backend.utils.spider_bugInfo import SpiderBugInfo
 from backend.utils.create_word import CreateWord
+from backend.utils.excel_analysis import ExcelAnalysis
 from backend.utils.mysql_bugInfo import MysqlBugInfo
 
 
@@ -670,64 +672,14 @@ def update_item(req):
 
 
 
-def creat_report(req):
-    '''
-    初始化变量
-    :param req:
-    :return:
-    '''
-    global filePath
-    rep = BaseResponse()
-    user_info = req.session['user_info']
-    u_nid = user_info['nid']
-    u_name = user_info['username']
-    ePassword = models.UserInfo.objects.get(nid=u_nid).password
-    headLine = req.POST.get('itemName')
-    cw = CreateWord(u_nid, headLine)
-    filePath = cw.return_fileName() # 获取全路径的文件名
-
-
-    rep.status = True
-    if req.method == "POST":
-        try:
-            cw.create_word() # 获取文档路径
-            rep.message = "word生成成功！"
-            rep.summary = "操作成功！"
-            rep.status = True
-        except Exception as e:
-            rep.status = False
-            rep.message = "word生成失败！"
-            rep.summary = "操作失败！"
-            print("报错原因：",e)
-
-
-    if req.method == "GET":
-        print('这是文件的filePath:',filePath)
-
-        obj_ri = models.ReportInfo.objects.get(user_info_id=u_nid)
-        emailCount = obj_ri.emailContent
-        email_list = cw.buffer_func(obj_ri.emailList)
-
-        # print('email_list:',email_list)
-        # print('email_list_type:', type(email_list))
-
-
-        authorEmail = '%s@bbdservice.com' % u_name
-        rep.message = "报告发送成功！"
-        rep.status = True
-
-        # print('authorEmail:',authorEmail)
-        # print('ePassword:',ePassword)
-
-        email_report(filePath, emailCount, email_list,authorEmail=authorEmail,ePassword=ePassword)
-    return HttpResponse(json.dumps(rep.__dict__))
-
 
 from django.http import FileResponse # 导入下载传输模块
 from django.utils.http import urlquote # 导入模块动态生成下载文件名
 import os
 import time
 
+#--------------------------------****word功能*****---------------------------------
+# word报告模板下载
 def report_download(req):
     time.sleep(2)
     fileName = os.path.basename(filePath) # 获取文件名字
@@ -741,7 +693,7 @@ def report_download(req):
     return response
 
 
-# 自定义上传报告功能
+# word报告自定义上传报告功能
 def custom_file_upload(req):
     rep_cfu = BaseResponse()
     time.sleep(1)  # 让文件生成后再执行下载操作
@@ -764,6 +716,136 @@ def custom_file_upload(req):
 
     return HttpResponse(json.dumps(rep_cfu.__dict__))
 
+
+def creat_report(req):
+    '''
+    初始化变量
+    :param req:
+    :return:
+    '''
+    global filePath
+    rep = BaseResponse()
+    user_info = req.session['user_info']
+    u_nid = user_info['nid']
+    u_name = user_info['username']
+    ePassword = models.UserInfo.objects.get(nid=u_nid).password
+    headLine = req.POST.get('itemName')
+    create_word = CreateWord(u_nid, headLine)
+    filePath = create_word.return_fileName() # 获取全路径的文件名
+
+
+    rep.status = True
+    if req.method == "POST":
+        try:
+            create_word.create_word() # 生成报告
+            rep.message = "word生成成功！"
+            rep.summary = "操作成功！"
+            rep.status = True
+        except Exception as e:
+            rep.status = False
+            rep.message = "word生成失败！"
+            rep.summary = "操作失败！"
+            print("报错原因：",e)
+
+
+    if req.method == "GET":
+        print('这是文件的filePath:',filePath)
+
+        obj_ri = models.ReportInfo.objects.get(user_info_id=u_nid)
+        emailCount = obj_ri.emailContent
+        email_list = create_word.buffer_func(obj_ri.emailList)
+
+        authorEmail = '%s@bbdservice.com' % u_name
+        rep.message = "报告发送成功！"
+        rep.status = True
+
+
+        email_report(filePath, emailCount, email_list,authorEmail=authorEmail,ePassword=ePassword)
+    return HttpResponse(json.dumps(rep.__dict__))
+
+
+
+#--------------------------------****excel功能*****---------------------------------
+
+# excel 模板下载
+def excel_download(req):
+    time.sleep(2)
+    fileName = os.path.basename(excel_souce_filePath) # 获取文件名称
+    print(fileName)
+
+    excel_file = open(excel_souce_filePath,'rb')
+    response = FileResponse(excel_file)
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="{0}"'.format(urlquote(fileName))
+
+    return response
+
+
+# 上传excel功能
+def excel_file_upload(req,excel_analysis,obj_mi):
+    flag = False # 用于前端的判断功能
+    uploadedFile = req.FILES.get('excel_data')
+    # 判断文件名是否是excel格式
+    excel_type = uploadedFile.name.split('.')[1]
+    if excel_type in ['xlsx','xls']:
+        # 开始处理上传的excel表单，并传入实体对象中进行解析
+        _workbook = xlrd.open_workbook(filename=None,file_contents=uploadedFile.read())
+        modalTable_result = excel_analysis.modal_param(_workbook)
+        # 将获取的信息存入数据库
+        try:
+            obj_mi.equ_env = modalTable_result['equ_env']
+            obj_mi.hr_lis = modalTable_result['hr_lis']
+            obj_mi.tac_des = modalTable_result['tac_des']
+            obj_mi.tac_from_con = modalTable_result['tac_from_con']
+            obj_mi.dev_bug = modalTable_result['dev_bug']
+            obj_mi.tt_con = modalTable_result['tt_con']
+
+            obj_mi.save()  # 最关键的一步，保存入库
+
+            message = "数据成功 入库！"
+            flag = True
+        except Exception as e:
+            message = "上传文件成功，入库错误！"
+    else:
+        message = "上传文件类型错误！"
+    return message,flag
+
+
+
+def creat_excel(req):
+    global excel_souce_filePath  # excel源地址 设置为全局变量地址
+    rep = BaseResponse()
+
+    # 获取uid
+    user_info = req.session['user_info']
+    u_nid = user_info['nid']
+
+    # 实例化对象 采用单例模式
+    excel_analysis = ExcelAnalysis()
+    excel_souce_filePath = excel_analysis.return_souceFile_path()
+
+    # 如果post发送的请求直接执行 上传相关操作
+    if req.method == 'POST':
+        # 创建数据库对象
+        obj_mi = models.ModalInfo.objects.get(user_info_id=u_nid)
+        # 传入两个关键参数 excel解析对象 和 数据库对象
+        try:
+            # 返回的两个参数分别为 信息、状态
+            message,flag = excel_file_upload(req,excel_analysis,obj_mi)
+
+            if flag:
+                rep.status = True
+            else:
+                rep.status = False
+
+            rep.message = message
+        except Exception as e:
+            print("Excel上传报错内容为：",e)
+            rep.message = "未知异常"
+            rep.status = False
+
+
+    return HttpResponse(json.dumps(rep.__dict__))
 
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 from backend.form import fields
-
+from django import forms
 
 class BaseForm:
 
@@ -33,3 +33,5 @@ class BaseForm:
                 self._error_dict[field_name] = field_obj.error
                 self._valid_status = False
         return self._valid_status
+
+

@@ -42,9 +42,15 @@ urlpatterns = [
     url(r'^report/([0-9]*)', home.testReport),
     url(r'^modal_info/$', account.modal_info),
     url(r'^update_item/$', account.update_item),
+
     url(r'^creat_report/$', account.creat_report),
+    url(r'^creat_excel/$', account.creat_excel),
+
     url(r'^report_download/$', account.report_download,name='report_download'),
+    url(r'^excel_download/$', account.excel_download,name='excel_download'),
     url(r'^upload_customFile/$',account.custom_file_upload),
+    # url(r'^excel_upload/$', account.excel_file_upload,name='excel_upload'),
+
     url(r'^per_data_store/$',account.per_data_store),
     url(r'^per_data_extract/$',account.per_data_extract),
     url(r'^per_data_clear/$',account.per_data_clear),

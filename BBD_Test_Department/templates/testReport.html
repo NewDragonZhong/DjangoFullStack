@@ -128,8 +128,16 @@
                 <div class="content-r">
                     <div class="form-group form-group-div">
                         <label for="exampleInputName2">邮件内容:</label>
-                        <textarea class="form-control form_info" name="emailList" style="height: 466px" placeholder="你还什么要说的吗"></textarea>
+                        <textarea class="form-control form_info" name="emailList" style="height: 466px" placeholder="还什么要说的吗"></textarea>
                    </div>
+                    <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
+                        <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="{% url 'excel_download' %}"> 添加信息_模板下载</a>
+                    </div>
+                    <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
+                        <input type="file" name="excel_data" id="excel_upload">
+                        <p></p>
+                        <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" onclick="ExcelUpload()"> 添加信息_内容上传</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,6 +212,8 @@
             BindCreateReport();
 
             BindSendReport();
+
+            DownLoadExcel();
 
             $('.act-menu').children().eq(2).addClass('active');
 
@@ -579,6 +589,63 @@
                 }
             });
         }
+
+
+        /* 绑定一个下载excel模板的事件 */
+        function DownLoadExcel() {
+            $('.excel_download').click(function () {
+                console.log("我被点击了！");
+                 if($('#action_nav').attr('is-login') == 'true'){
+                    $.ajax({
+                        url: '/creat_excel/',
+                        type: 'GET',
+                        data: {},
+                        dataType: 'json',
+                        success: function (arg) {
+                            if (arg.status){
+
+                            }else {
+                                console.log(arg.message);
+                                console.log(arg.status);
+                            }
+                        }
+                    });
+                }else{
+                    $('#accountDialog').removeClass('hide');
+                    $('.shadow').removeClass('hide');
+                }
+            });
+        }
+
+
+        /* 绑定了一个上传 excel模板的事件 */
+        function ExcelUpload() {
+            var form_data = new FormData();
+            var file_info = $('#excel_upload')[0].files[0];
+            form_data.append('excel_data',file_info);
+            $.ajax({
+                url:'/creat_excel/',
+                type:'POST',
+                data:form_data,
+                processData:false,
+                contentType:false,
+                dataType:'json',
+                success:function (arg) {
+                    console.log("OK!");
+                    console.log(arg);
+                    if (arg.status){
+                        alert(arg.message);
+                        // 成功上传后 直接不让填 添加信息的模态对话框
+                        $(".btn-info").addClass("btn-info-finish").text("- 添加信息")
+                            .removeClass("this-btn-info").removeClass("btn-info");
+                    }else {
+                        alert(arg.message);
+                    }
+                }
+            });
+        }
+        
+
 
         /* 绑定了一个上传 自定义报告的事件*/
         function FileUpload() {
