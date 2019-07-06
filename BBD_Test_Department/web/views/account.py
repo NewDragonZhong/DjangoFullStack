@@ -111,6 +111,12 @@ def table_verify(obj):
     if not obj_pst:
         models.PertestingServersTable.objects.create(user_info_id=obj.nid)
 
+    # 查询 UserFilesPaths 数据中 有没有该数据
+    obj_pst = models.UserFilesPaths.objects.filter(user_info_id=obj.nid).first()
+    if not obj_pst:
+        models.UserFilesPaths.objects.create(user_info_id=obj.nid)
+
+
 
 def register(req):
     '''
@@ -233,9 +239,10 @@ def logout(req):
     user_info = req.session['user_info']
     u_nid = user_info['nid']
 
-    # 清除记录 性能测试表的数据
+    # 清除记录 性能测试表以及报告路径存储表的数据
     models.PertestingTable.objects.get(user_info_id=u_nid).delete()
     models.PertestingServersTable.objects.get(user_info_id=u_nid).delete()
+    models.UserFilesPaths.objects.get(user_info_id=u_nid).delete()
 
     req.session.clear()
     return redirect('/index/')
@@ -679,9 +686,15 @@ import os
 import time
 
 #--------------------------------****word功能*****---------------------------------
-# word报告模板下载
-def report_download(req):
-    time.sleep(2)
+# word报告模版&&excel模板下载
+def word_download(req):
+    time.sleep(2) # 思考时间
+    user_info = req.session['user_info']
+    u_nid = user_info['nid']
+    obj_ufp = models.UserFilesPaths.objects.get(user_info_id=u_nid)
+    filePath = obj_ufp.word_resultFile_path
+    print (filePath)
+
     fileName = os.path.basename(filePath) # 获取文件名字
     print(fileName)
 
@@ -697,6 +710,12 @@ def report_download(req):
 def custom_file_upload(req):
     rep_cfu = BaseResponse()
     time.sleep(1)  # 让文件生成后再执行下载操作
+
+    # 需要获取文件存储路径
+    user_info = req.session['user_info']
+    u_nid = user_info['nid']
+    obj_ufp = models.UserFilesPaths.objects.get(user_info_id=u_nid)
+    filePath = obj_ufp.word_resultFile_path
 
     if req.method == 'POST':
         f = open(filePath, 'wb') #  打开即将要修改的文件
@@ -723,7 +742,7 @@ def creat_report(req):
     :param req:
     :return:
     '''
-    global filePath
+    # global filePath
     rep = BaseResponse()
     user_info = req.session['user_info']
     u_nid = user_info['nid']
@@ -731,13 +750,15 @@ def creat_report(req):
     ePassword = models.UserInfo.objects.get(nid=u_nid).password
     headLine = req.POST.get('itemName')
     create_word = CreateWord(u_nid, headLine)
-    filePath = create_word.return_fileName() # 获取全路径的文件名
 
+    obj_ufp = models.UserFilesPaths.objects.get(user_info_id=u_nid)
 
-    rep.status = True
     if req.method == "POST":
         try:
             create_word.create_word() # 生成报告
+            obj_ufp.word_resultFile_path = create_word.return_filePath()  # 将获取的文件名存入数据库
+            obj_ufp.save()
+
             rep.message = "word生成成功！"
             rep.summary = "操作成功！"
             rep.status = True
@@ -749,8 +770,6 @@ def creat_report(req):
 
 
     if req.method == "GET":
-        print('这是文件的filePath:',filePath)
-
         obj_ri = models.ReportInfo.objects.get(user_info_id=u_nid)
         emailCount = obj_ri.emailContent
         email_list = create_word.buffer_func(obj_ri.emailList)
@@ -758,7 +777,7 @@ def creat_report(req):
         authorEmail = '%s@bbdservice.com' % u_name
         rep.message = "报告发送成功！"
         rep.status = True
-
+        filePath = obj_ufp.word_resultFile_path # 获取报告地址
 
         email_report(filePath, emailCount, email_list,authorEmail=authorEmail,ePassword=ePassword)
     return HttpResponse(json.dumps(rep.__dict__))
@@ -769,10 +788,10 @@ def creat_report(req):
 
 # excel 模板下载
 def excel_download(req):
-    time.sleep(2)
+    excel_analysis = ExcelAnalysis()
+    excel_souce_filePath = excel_analysis.return_souceFile_path()
     fileName = os.path.basename(excel_souce_filePath) # 获取文件名称
     print(fileName)
-
     excel_file = open(excel_souce_filePath,'rb')
     response = FileResponse(excel_file)
     response['Content-Type'] = 'application/octet-stream'
@@ -813,7 +832,6 @@ def excel_file_upload(req,excel_analysis,obj_mi):
 
 
 def creat_excel(req):
-    global excel_souce_filePath  # excel源地址 设置为全局变量地址
     rep = BaseResponse()
 
     # 获取uid
@@ -822,7 +840,6 @@ def creat_excel(req):
 
     # 实例化对象 采用单例模式
     excel_analysis = ExcelAnalysis()
-    excel_souce_filePath = excel_analysis.return_souceFile_path()
 
     # 如果post发送的请求直接执行 上传相关操作
     if req.method == 'POST':

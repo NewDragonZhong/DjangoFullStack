@@ -105,7 +105,7 @@
 
                     {% if request.session.is_login %}
                         <div class="form-group-submit">
-                            <a class="btn btn-primary" id="CreateReport" href="{% url 'report_download' %}" style="color: white">生成报告</a>
+                            <a class="btn btn-primary" id="CreateReport" href="{% url 'word_download' %}" style="color: white">生成报告</a>
                             <button type="button" class="btn btn-default hide" disabled="disabled" id="SendReport">发送报告</button>
                                 <span class="hide spanSR">
                                     <img src="/statics/images/loader.gif" style="height: 16px;width: 16px">
@@ -130,14 +130,25 @@
                         <label for="exampleInputName2">邮件内容:</label>
                         <textarea class="form-control form_info" name="emailList" style="height: 466px" placeholder="还什么要说的吗"></textarea>
                    </div>
-                    <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
-                        <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="{% url 'excel_download' %}"> 添加信息_模板下载</a>
-                    </div>
-                    <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
-                        <input type="file" name="excel_data" id="excel_upload">
-                        <p></p>
-                        <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" onclick="ExcelUpload()"> 添加信息_内容上传</a>
-                    </div>
+                    {% if request.session.is_login %}
+                        <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
+                            <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="{% url 'excel_download' %}"> 添加信息_模板下载</a>
+                        </div>
+                        <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
+                            <input type="file" name="excel_data" id="excel_upload">
+                            <p></p>
+                            <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" onclick="ExcelUpload()"> 添加信息_内容上传</a>
+                        </div>
+                    {% else %}
+                        <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
+                            <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="javascript:void(0);"> 添加信息_模板下载</a>
+                        </div>
+                        <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
+                            <input type="file" name="excel_data" id="excel_upload">
+                            <p></p>
+                            <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" href="javascript:void(0);"> 添加信息_内容上传</a>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -213,7 +224,7 @@
 
             BindSendReport();
 
-            DownLoadExcel();
+{#            DownLoadExcel();#}
 
             $('.act-menu').children().eq(2).addClass('active');
 
@@ -594,7 +605,7 @@
         /* 绑定一个下载excel模板的事件 */
         function DownLoadExcel() {
             $('.excel_download').click(function () {
-                console.log("我被点击了！");
+{#                console.log("我被点击了！");#}
                  if($('#action_nav').attr('is-login') == 'true'){
                     $.ajax({
                         url: '/creat_excel/',
@@ -603,7 +614,7 @@
                         dataType: 'json',
                         success: function (arg) {
                             if (arg.status){
-
+                                console.log(arg.message)
                             }else {
                                 console.log(arg.message);
                                 console.log(arg.status);

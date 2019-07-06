@@ -46,7 +46,7 @@ urlpatterns = [
     url(r'^creat_report/$', account.creat_report),
     url(r'^creat_excel/$', account.creat_excel),
 
-    url(r'^report_download/$', account.report_download,name='report_download'),
+    url(r'^word_download/$', account.word_download,name='word_download'),
     url(r'^excel_download/$', account.excel_download,name='excel_download'),
     url(r'^upload_customFile/$',account.custom_file_upload),
     # url(r'^excel_upload/$', account.excel_file_upload,name='excel_upload'),

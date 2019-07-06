@@ -135,3 +135,10 @@ class PertestingServersTable(models.Model):
     sysLoad_loadLevel_1min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
     sysLoad_loadLevel_5min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
     sysLoad_loadLevel_15min = models.CharField(max_length=16)  # 当前的负债均衡情况(分别取1min,5min,15min的均值)
+
+
+class UserFilesPaths(models.Model):
+    user_info = models.ForeignKey(to='UserInfo',to_field='nid',on_delete=models.CASCADE)
+    word_souceFile_path = models.CharField(max_length=32)
+    word_resultFile_path = models.CharField(max_length=32)
+    excel_souceFile_path = models.CharField(max_length=32)

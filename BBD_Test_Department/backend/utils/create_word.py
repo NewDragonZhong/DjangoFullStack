@@ -26,7 +26,7 @@ class CreateWord:
         # print("--------******--------")
         # print(type(json.loads(json.dumps(eval(self.obj_mi.equ_env)))))
 
-    def return_fileName(self):
+    def return_filePath(self):
         return self.resultFile_path
 
 
