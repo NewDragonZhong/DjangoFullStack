@@ -95,26 +95,26 @@ class SpiderProduct(models.Model):
 class PertestingTable(models.Model):
     user_info = models.ForeignKey(to='UserInfo', to_field='nid', on_delete=models.CASCADE)
     method = models.CharField(max_length=32,default='get')
-    maxnum = models.IntegerField(max_length=16,default=10)      # 最大并发数
-    oncenum = models.IntegerField(max_length=16, default=2)    # 每秒启动的并发数
+    maxnum = models.IntegerField(default=10)      # 最大并发数
+    oncenum = models.IntegerField(default=2)    # 每秒启动的并发数
     hosts = models.CharField(max_length=32,null=True)
     paths = models.CharField(max_length=64)
     headers = models.CharField(max_length=128)
     datas = models.CharField(max_length=128)
 
-    success_req = models.IntegerField(max_length=16,default=0)
-    lose_req = models.IntegerField(max_length=16,default=0)
-    total_req = models.IntegerField(max_length=16,default=0)
+    success_req = models.IntegerField(default=0)
+    lose_req = models.IntegerField(default=0)
+    total_req = models.IntegerField(default=0)
 
     total_time = models.FloatField(max_length=16,default=0.0) # 请求总共花费的时间
     avg_time = models.FloatField(max_length=16,default=0.0)   #  请求的平均时间
     count_time = models.FloatField(max_length=16,default=0.0) # 单次并发请求的时间
 
-    loop_num = models.IntegerField(max_length=16, default=0) # 请求循环次数
+    loop_num = models.IntegerField(default=0) # 请求循环次数
     rps = models.FloatField(max_length=16,default=0.0)  # 每秒处理的事务数
 
     assert_dic = models.CharField(max_length=128)  # 存储断言请求值
-    maxTime = models.IntegerField(max_length=8, default=6)  # 存储允许的最大响应时间
+    maxTime = models.IntegerField(default=6)  # 存储允许的最大响应时间
     ctime = models.DateTimeField(auto_now_add=True)
 
 
@@ -123,7 +123,7 @@ class PertestingServersTable(models.Model):
     user_info = models.ForeignKey(to='UserInfo',to_field='nid',on_delete=models.CASCADE)
     # 服务器的登录信息
     server_add = models.CharField(max_length=32)
-    server_port = models.IntegerField(max_length=16,default=22)
+    server_port = models.IntegerField(default=22)
     server_username = models.CharField(max_length=32)
     server_password = models.CharField(max_length=32)
     # 记录服务的信息 --------**内存使用量**--------

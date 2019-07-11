@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="/statics/css/commons.css" />
     <link rel="stylesheet" href="/statics/bootstrap-3.3.7-dist/css/bootstrap.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="/statics/images/favicon.ico">
-    <meta name="keywords" content="测试、测试报告">
-    <meta name="discription" content="发送测试报告">
+    <meta name="keywords" content="测试报告&测试工具">
+    <meta name="discription" content="测试平台">
 
 
     {% block css %} {% endblock %}
@@ -184,115 +184,9 @@
         </div>
     </div>
 
-    <script src="/statics/js/jquery-1.12.4.js"></script>
+    <script src="/statics/js/jquery-2.1.4.min.js"></script>
     <script src="/statics/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     {% block javascript %} {% endblock %}
-    <script>
-
-        $(function(){
-            $('#loginUserNc,#userOprBox').mouseover(function(){
-                $('#userOprBox').css('display', 'block');
-                $('#loginUserNc').addClass('active');
-            }).mouseout(function () {
-                $('#userOprBox').css('display', 'none');
-                $('#loginUserNc').removeClass('active');
-            });
-
-            BindLoginRegisterDialog();
-        });
-
-        function BindLoginRegisterDialog(){
-            $('#reg_link_a,#login_link_a').click(function(){
-                $('#accountDialog').removeClass('hide');
-                $('.shadow').removeClass('hide');
-            });
-        }
-
-        function CloseDialog(dialog){
-            $(dialog).addClass('hide');
-            $('.shadow').addClass('hide');
-        }
-
-        /*
-        点击登陆按钮
-        */
-        function SubmitLogin(ths){
-            $(ths).children(':eq(0)').addClass('hide');
-            $(ths).addClass('not-allow').children(':eq(1)').removeClass('hide');
-            // 发送Ajax请求
-            //完成之后
-            $('#model_login .inp .error').remove();
-
-            var post_dict = {};
-            $('#model_login input').each(function(){
-                post_dict[$(this).attr("name")] = $(this).val();
-            });
-
-            $.ajax({
-                url: '/login/',
-                type: 'POST',
-                data: post_dict,
-                dataType: 'json',
-                success: function(arg){
-                    if(arg.status){
-                        window.location.href = '/index';
-                    }else{
-                        $.each(arg.message, function(k,v){
-
-                            //<span class="error">s</span>
-                            var tag = document.createElement('span');
-                            tag.className = 'error';
-                            tag.innerText = v[0]['message'];
-                            $('#model_login input[name="'+ k +'"]').after(tag);
-                        })
-                    }
-                }
-            });
-
-            $(ths).removeClass('not-allow').children(':eq(1)').addClass('hide');
-            $(ths).children(':eq(0)').removeClass('hide');
-        }
-
-        /*
-        点击注册按钮
-        */
-        function SubmitRegister(ths){
-            $('#register_error_summary').empty();
-            $('#model_register .inp .error').remove();
-
-            $(ths).children(':eq(0)').addClass('hide');
-            $(ths).addClass('not-allow').children(':eq(1)').removeClass('hide');
-
-            var post_dict = {};
-            $('#model_register input').each(function(){
-                post_dict[$(this).attr("name")] = $(this).val();
-            });
-
-            $.ajax({
-                url: '/register/',
-                type: 'POST',
-                data: post_dict,
-                dataType: 'json',
-                success: function(arg){
-                    if(arg.status){
-                        window.location.href = '/index';
-                    }else{
-                        $.each(arg.message, function(k,v){
-                            //<span class="error">s</span>
-                            var tag = document.createElement('span');
-                            tag.className = 'error';
-                            tag.innerText = v[0]['message'];
-                            $('#model_register input[name="'+ k +'"]').after(tag);
-                        })
-                    }
-                }
-            });
-
-            $(ths).removeClass('not-allow').children(':eq(1)').addClass('hide');
-            $(ths).children(':eq(0)').removeClass('hide');
-        }
-
-
-    </script>
+    <script src="/statics/js/layout.js"></script>
 </body>
 </html>
