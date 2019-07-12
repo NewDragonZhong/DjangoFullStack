@@ -23,22 +23,23 @@ class UserInfo(models.Model):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=64)
-    summary = models.CharField(max_length=128,null=True)
-    url = models.URLField(null=True)
+    title = models.CharField(max_length=64) # 新闻标题
+    summary = models.CharField(max_length=128,null=True) # 新闻主体内容
+    url = models.URLField(null=True) # url
+    domain = models.CharField(max_length=32,default="") # 域名
+    icon = models.CharField(max_length=32,default="") # 图标
+    img_href = models.CharField(max_length=64,default="") # 图片链接
+    explain = models.CharField(max_length=32,default="") # 来源注释
     ctime = models.DateTimeField(auto_now_add=True)  # 定义日期字段时选择让系统自动填写
     user = models.ForeignKey(to='UserInfo',to_field='nid',related_name='n',on_delete=models.CASCADE)     # 按照
     news_type_choices = [
-        (1, "42区"),
-        (2, "段子"),
-        (3, "图片"),
-        (4, "挨踢1024"),
-        (5, "你问我答"),
+        (1, "圈内"),
+        (2, "圈外"),
     ]
 
     nt = models.IntegerField(choices=news_type_choices)
 
-    # nt = models.ForeignKey(to='NewsType',to_field='id',related_name='tn')
+
     favor_count = models.IntegerField(default=0) # 点赞个数
     comment_count = models.IntegerField(default=0) #评论个数
     favor = models.ManyToManyField(to="UserInfo")

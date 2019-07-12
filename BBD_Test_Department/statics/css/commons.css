@@ -638,6 +638,7 @@ textarea {
 .content-list .item .news-content .part2 .collect-a:hover .icon-collect{
     background-position: 0 -140px;
 }
+
 .content-list .item .news-content .part2 .collect-a, .content-list .item .news-content .part2 .remove-col-a {
     width: 69px;
     cursor: pointer;

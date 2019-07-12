@@ -77,8 +77,6 @@ def comment(comment_list):
         else:
             parent_row['children'].append(item)
 
-
-
     return json.dumps(comment_tree,cls=DataEncoder)
 
 

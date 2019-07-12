@@ -10,13 +10,14 @@ from email import encoders
 from email.mime.base import MIMEBase
 import os
 
-def email(email_list,content,subject="BBD测试部-用户注册"):
+def email(email_list,code,subject="BBD测试部-用户注册"):
     '''
     :param email_list: 要发送给的用户邮箱列表
     :param content: 输入的内容编码采用的utf-8格式
     :param subject: 邮件的主题
     :return: 就是发送一个通知邮件喏！~ 没啥好说的
     '''
+    content = "您的验证码为:"+code
     msg = MIMEText(content,'plain','utf-8')
     msg['From'] = formataddr(["BBD测试部",'17360137375@163.com'])
     msg['Subject'] = subject

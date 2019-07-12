@@ -17,6 +17,8 @@ from backend.utils.create_word import CreateWord
 from backend.utils.excel_analysis import ExcelAnalysis
 from backend.utils.mysql_bugInfo import MysqlBugInfo
 
+from django.views.decorators.csrf import csrf_exempt,csrf_protect
+
 
 # ------------------- 基础功能 --------------------
 
@@ -32,7 +34,7 @@ def check_code(req):
     return HttpResponse(stream.getvalue())
 
 
-
+@csrf_exempt
 def send_msg(req):
     '''
     该功能主要用于注册时候发送，邮箱验证码
@@ -117,7 +119,7 @@ def table_verify(obj):
         models.UserFilesPaths.objects.create(user_info_id=obj.nid)
 
 
-
+@csrf_exempt
 def register(req):
     '''
     注册
@@ -175,6 +177,7 @@ def register(req):
     return HttpResponse(json.dumps(rep.__dict__))
 
 
+@csrf_exempt
 def login(req):
     '''
     用户登录 并且在登录后初始化各个表数据

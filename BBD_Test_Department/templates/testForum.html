@@ -43,7 +43,7 @@
                             <div class="item">
 
                                 <div class="news-pic">
-                                    <img src="" alt="闲谈新鲜事" style="display: inline;">
+                                    <img src={{ item.img_href }} alt={{ item.explain }} style="display: inline;">
                                 </div>
 
                                 <div class="null-item"></div>
@@ -51,7 +51,7 @@
                                 <div class="news-content">
                                     <div class="part1">
                                         <a href={{item.url}} class="show-content" target="_blank">{{item.title}}</a>
-                                        <span class="content-source">-wallstreetcn.com</span>
+                                        <span class="content-source">-{{ item.domain }}</span>
                                         <a href="/r/news/hot/1" class="n2">
                                             <span class="content-kind"></span>
                                         </a>
@@ -75,19 +75,20 @@
                                         <a href="javascript:void(0);" class="collect-a" >
                                             <span class="hand-icon icon-collect"></span><b>私藏</b>
                                         </a>
-                                        <a href="#" class="user-a">
-                                            <span><img src="//www.baidu.com"></span>
-                                            <b>华尔街见闻</b>
+                                        <a href="https://dig.chouti.com" class="user-a">
+                                            <span>
+                                                <img style="margin-bottom: 9px;width: 20px;height: 20px;border: 0px solid #cccccc" src={{ item.icon }}>
+                                            </span>
+                                            <b>{{ item.explain }}</b>
                                         </a>
 										
 										
                                         <span class="time-into">
                                             <a class="time-a" href="#" target="_blank">
-                                                <b>2018-05-29</b>
+                                                <b>{{ item.ctime }}</b>
                                             </a>
                                             <i>入热榜</i>
                                         </span>
-
 
                                     </div>
                                     <!-- 评论区域 -->
@@ -192,11 +193,8 @@
                         <div class="f3">
                             <span>发布到：</span>
                             <div class="news-type" style="display: inline-block">
-                                <a value="1" class="active">今日头条</a>
-                                <a value="4" >挨踢1024</a>
-                                <a value="2" >娱乐八卦</a>
-                                <a value="3" >政治军事</a>
-                                <a value="5" >经济关注</a>
+                                <a value="1" class="active">圈内</a>
+                                <a value="2" >圈外</a>
                             </div>
                         </div>
                         <div class="f4">
@@ -212,8 +210,8 @@
 
                             <span>发布到：</span>
                             <div class="news-type" style="display: inline-block">
-                                <a value="2" class="active">段子</a>
-                                <a value="5">你问我答</a>
+                                <a value="1" class="active">圈内</a>
+                                <a value="2" >圈外</a>
                             </div>
                         </div>
                         <div class="f4">
@@ -240,8 +238,8 @@
                         <div class="f3">
                             <span>发布到：</span>
                             <div class="news-type" style="display: inline-block">
-                                <a value="3" class="active">图片</a>
-                                <a value="5">你问我答</a>
+                                <a value="1" class="active">圈内</a>
+                                <a value="2" >圈外</a>
                             </div>
                         </div>
                         <div class="f4">
