@@ -31,7 +31,6 @@ urlpatterns = [
 
     #-----***----- 测试论坛
     url(r'^index/([0-9]*)', home.testForum),
-    url(r'^performance/$', home.testForum),
     url(r'^comment/$', account.comment),
     url(r'^favor/$', account.favor),
     url(r'^upload_image/$', account.uploadImage),
@@ -44,7 +43,7 @@ urlpatterns = [
     url(r'^servers_info_extract/$', account.servers_info_extract),
 
     # -----***----- 测试报告
-    url(r'^performance/$', home.testReport),
+    url(r'^report/([0-9]*)', home.testReport),
     url(r'^modal_info/$', account.modal_info),
     url(r'^update_item/$', account.update_item),
     url(r'^creat_report/$', account.creat_report),
