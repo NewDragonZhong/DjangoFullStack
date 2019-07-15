@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4528ca0-b4ea-4f71-8899-36a4c1d919e9" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/news_spider/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/news_spider/toutiaoSpider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/spider/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/spider/handSpider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/change_chouti.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/change_chouti.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/testForum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testForum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$mysql_bugInfo.coverage" NAME="mysql_bugInfo Coverage Results" MODIFIED="1544433284067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/utils" />
+    <SUITE FILE_PATH="coverage/change_chouti$account.coverage" NAME="account Coverage Results" MODIFIED="1527572515974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/views" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$perTesting.coverage" NAME="perTesting Coverage Results" MODIFIED="1557993246324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$toutiaoSpider.coverage" NAME="toutiaoSpider Coverage Results" MODIFIED="1563167765679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/news_spider" />
+    <SUITE FILE_PATH="coverage/change_chouti$paramiko_sshclient.coverage" NAME="paramiko_sshclient Coverage Results" MODIFIED="1522639603759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/change_chouti$paramiko_transport.coverage" NAME="paramiko_transport Coverage Results" MODIFIED="1526456378503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/change_chouti$commons.coverage" NAME="commons Coverage Results" MODIFIED="1527844160804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$create_word.coverage" NAME="create_word Coverage Results" MODIFIED="1543664265016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/utils" />
+    <SUITE FILE_PATH="coverage/change_chouti$index_username.coverage" NAME="index_username Coverage Results" MODIFIED="1528078050737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/templatetags" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$BeiJinBank_IndexTest.coverage" NAME="BBD_Test_Department Coverage Results" MODIFIED="1557456588849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../" />
+    <SUITE FILE_PATH="coverage/change_chouti$test.coverage" NAME="test Coverage Results" MODIFIED="1522311686736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$handSpider.coverage" NAME="handSpider Coverage Results" MODIFIED="1563169515726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/spider" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$perTesting__1_.coverage" NAME="perTesting (1) Coverage Results" MODIFIED="1558666703711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/utils" />
+    <SUITE FILE_PATH="coverage/BBD_Test_Department$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1547103615962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="web_news: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BBD_Test_Department">
+      <favorite_root url="file://$PROJECT_DIR$/statics/images/circle.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="149">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/news_spider/toutiaoSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+              <folding>
+                <element signature="e#7#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/home.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <folding>
+                <element signature="e#46#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/account.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/spider/handSpider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding>
+                <element signature="e#640#672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/testForum.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="213" column="48" selection-start-line="213" selection-start-column="48" selection-end-line="213" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>productItem</find>
+      <find>comment</find>
+      <find>news_list</find>
+      <find>commons</find>
+      <find>/comment</find>
+      <find>ToggleCommentArea</find>
+      <find>cooking</find>
+      <find>req.session</find>
+      <find>comt-arrow-8118680</find>
+      <find>/comment/</find>
+      <find>al</find>
+      <find>alert</find>
+      <find>login</find>
+      <find>评论区域</find>
+      <find>send_msg</find>
+      <find>.hand-ic</find>
+      <find>digg-a</find>
+      <find>icon-collect</find>
+      <find>hand-icon</find>
+      <find>content-source</find>
+      <find>闲谈新鲜事</find>
+      <find>2018</find>
+      <find>item.img</find>
+      <find>发布到</find>
+      <find>testReport</find>
+      <find>report</find>
+      <find>explain</find>
+      <find>models</find>
+      <find>margin-bottom: 9px;width: 20px;height: 20px;border: 0px solid #cccccc</find>
+      <find>圈内</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/index_tr.html" />
+        <option value="$PROJECT_DIR$/backend/utils/mysql_bugInfo.py" />
+        <option value="$PROJECT_DIR$/templates/my_report.html" />
+        <option value="$PROJECT_DIR$/templates/small_talk.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b0734e0f-845b-45a8-a9de-008ca8e3c660/console.sql" />
+        <option value="$USER_HOME$/Desktop/BeiJinBank_IndexTest.py" />
+        <option value="$PROJECT_DIR$/statics/css/newmons.css" />
+        <option value="$PROJECT_DIR$/statics/css/pertestingmons.css" />
+        <option value="$PROJECT_DIR$/perTesting.py" />
+        <option value="$PROJECT_DIR$/templates/test_comment.html" />
+        <option value="$PROJECT_DIR$/templates/test-echarts02.html" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/templates/test_echarts02.html" />
+        <option value="$PROJECT_DIR$/templates/echarts_case02.html" />
+        <option value="$PROJECT_DIR$/templates/echarts_case03.html" />
+        <option value="$PROJECT_DIR$/templates/news.html" />
+        <option value="$PROJECT_DIR$/templates/pertesting.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/web/views/home.py" />
+        <option value="$PROJECT_DIR$/backend/utils/perTesting.py" />
+        <option value="$PROJECT_DIR$/backend/utils/servers_info.py" />
+        <option value="$PROJECT_DIR$/backend/form/forms.py" />
+        <option value="$PROJECT_DIR$/backend/utils/excel_analysis.py" />
+        <option value="$PROJECT_DIR$/backend/utils/create_word.py" />
+        <option value="$PROJECT_DIR$/statics/js/_layout.js" />
+        <option value="$PROJECT_DIR$/statics/js/testForum.js" />
+        <option value="$PROJECT_DIR$/statics/js/test_forum.js" />
+        <option value="$PROJECT_DIR$/statics/js/layout.js" />
+        <option value="$PROJECT_DIR$/statics/plugins/testForum-box/_testForum.js" />
+        <option value="$PROJECT_DIR$/statics/js/_testPerformance.js" />
+        <option value="$PROJECT_DIR$/statics/js/_testReport.js" />
+        <option value="$PROJECT_DIR$/templates/testPerformance.html" />
+        <option value="$PROJECT_DIR$/templates/testReport.html" />
+        <option value="$PROJECT_DIR$/statics/js/_testForum.js" />
+        <option value="$PROJECT_DIR$/backend/utils/message.py" />
+        <option value="$PROJECT_DIR$/backend/commons.py" />
+        <option value="$PROJECT_DIR$/web/views/account.py" />
+        <option value="$PROJECT_DIR$/change_chouti/settings.py" />
+        <option value="$PROJECT_DIR$/web/urlconfs/testPerformance.py" />
+        <option value="$PROJECT_DIR$/web/urlconfs/testReport.py" />
+        <option value="$PROJECT_DIR$/web/urlconfs/layout.py" />
+        <option value="$PROJECT_DIR$/web/urlconfs/testForum.py" />
+        <option value="$PROJECT_DIR$/statics/css/commons.css" />
+        <option value="$PROJECT_DIR$/change_chouti/urls.py" />
+        <option value="$PROJECT_DIR$/backend/news_spider/toutiaoSpider.py" />
+        <option value="$PROJECT_DIR$/templates/testForum.html" />
+        <option value="$PROJECT_DIR$/web/spider/handSpider.py" />
+        <option value="$PROJECT_DIR$/web/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/_layout.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1771" />
+    <option name="height" value="939" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="news_spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="change_chouti" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="statics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="spider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BBD_Test_Department" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BBD_Test_Department" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GitHub\BBD_Test_Department\change_chouti" />
+      <recent name="F:\BBD_Test_Department\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\GitHub\BBD_Test_Department\statics\images" />
+      <recent name="F:\GitHub\BBD_Test_Department\statics\js" />
+      <recent name="F:\GitHub\BBD_Test_Department\statics\plugins\testForum-box" />
+      <recent name="F:\BBD_Test_Department\templates\TR_templates" />
+      <recent name="F:\BBD_Test_Department\statics\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.handSpider">
+    <configuration name="BBD_Test_Department" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="handSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web/spider" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/spider/handSpider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mysql_bugInfo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/utils/mysql_bugInfo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="perTesting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:\BBD_Test_Department\backend\utils\perTesting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="toutiaoSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/news_spider" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/news_spider/toutiaoSpider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="change_chouti" type="Python.DjangoServer" factoryName="Django server">
+      <module name="change_chouti" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.change_chouti" />
+      <item itemvalue="Python.mysql_bugInfo" />
+      <item itemvalue="Python.perTesting" />
+      <item itemvalue="Python.BBD_Test_Department" />
+      <item itemvalue="Python.toutiaoSpider" />
+      <item itemvalue="Python.handSpider" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.handSpider" />
+        <item itemvalue="Python.toutiaoSpider" />
+        <item itemvalue="Python.BBD_Test_Department" />
+        <item itemvalue="Python.perTesting" />
+        <item itemvalue="Python.mysql_bugInfo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4528ca0-b4ea-4f71-8899-36a4c1d919e9" name="默认的" comment="" />
+      <created>1511577348080</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1511577348080</updated>
+      <workItem from="1543211269773" duration="9045000" />
+      <workItem from="1543282221453" duration="990000" />
+      <workItem from="1543283233380" duration="68000" />
+      <workItem from="1543283317795" duration="18846000" />
+      <workItem from="1543317561185" duration="11869000" />
+      <workItem from="1543373123014" duration="6626000" />
+      <workItem from="1543409135868" duration="3922000" />
+      <workItem from="1543543339229" duration="19254000" />
+      <workItem from="1543582265191" duration="1833000" />
+      <workItem from="1543650653055" duration="4647000" />
+      <workItem from="1543705651158" duration="11117000" />
+      <workItem from="1543800473363" duration="16410000" />
+      <workItem from="1543829327902" duration="46589000" />
+      <workItem from="1544063494137" duration="25919000" />
+      <workItem from="1544152382407" duration="7757000" />
+      <workItem from="1544405525423" duration="51906000" />
+      <workItem from="1544836007911" duration="25475000" />
+      <workItem from="1545096608585" duration="46000" />
+      <workItem from="1545183052441" duration="1476000" />
+      <workItem from="1545372802162" duration="315000" />
+      <workItem from="1545381812929" duration="1358000" />
+      <workItem from="1545961323750" duration="4325000" />
+      <workItem from="1545983222800" duration="672000" />
+      <workItem from="1546050576666" duration="17316000" />
+      <workItem from="1546391172975" duration="24024000" />
+      <workItem from="1546482203953" duration="26768000" />
+      <workItem from="1546823754047" duration="34349000" />
+      <workItem from="1546935836589" duration="1096000" />
+      <workItem from="1546995669257" duration="5283000" />
+      <workItem from="1547014847199" duration="875000" />
+      <workItem from="1547023027316" duration="1793000" />
+      <workItem from="1547100151817" duration="1149000" />
+      <workItem from="1547101809590" duration="1844000" />
+      <workItem from="1547274976829" duration="190000" />
+      <workItem from="1547275620351" duration="72000" />
+      <workItem from="1547348714352" duration="692000" />
+      <workItem from="1547619922109" duration="9720000" />
+      <workItem from="1547951704875" duration="10212000" />
+      <workItem from="1548814165764" duration="1722000" />
+      <workItem from="1548987462634" duration="1018000" />
+      <workItem from="1551087444442" duration="503000" />
+      <workItem from="1554363033555" duration="3201000" />
+      <workItem from="1555378066359" duration="134000" />
+      <workItem from="1557456112515" duration="16421000" />
+      <workItem from="1557795009115" duration="9004000" />
+      <workItem from="1557881098362" duration="3119000" />
+      <workItem from="1557904558893" duration="46689000" />
+      <workItem from="1558315392174" duration="8906000" />
+      <workItem from="1558339588658" duration="5304000" />
+      <workItem from="1558347055994" duration="17196000" />
+      <workItem from="1558430377199" duration="19992000" />
+      <workItem from="1558516467440" duration="43456000" />
+      <workItem from="1558919828032" duration="114106000" />
+      <workItem from="1559784131712" duration="3626000" />
+      <workItem from="1559789267729" duration="9511000" />
+      <workItem from="1560231862461" duration="45768000" />
+      <workItem from="1560562812233" duration="3377000" />
+      <workItem from="1561102697892" duration="884000" />
+      <workItem from="1561596539143" duration="3394000" />
+      <workItem from="1561946477912" duration="1689000" />
+      <workItem from="1562045535642" duration="467000" />
+      <workItem from="1562119279199" duration="178000" />
+      <workItem from="1562131434522" duration="32917000" />
+      <workItem from="1562632297071" duration="1713000" />
+      <workItem from="1562658954507" duration="2250000" />
+      <workItem from="1562809805546" duration="23793000" />
+      <workItem from="1562911171234" duration="9562000" />
+      <workItem from="1563152504860" duration="10287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="846035000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18390192" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Database Console" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28060672" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="运行" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2611051" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="right" id="SciView" weight="0.15191898" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.19722815" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/urlconfs/layout.py" />
+    <entry file="file://$PROJECT_DIR$/web/urlconfs/testForum.py" />
+    <entry file="file://$PROJECT_DIR$/web/urlconfs/testPerformance.py" />
+    <entry file="file://$PROJECT_DIR$/web/urlconfs/testReport.py" />
+    <entry file="file://$PROJECT_DIR$/backend/commons.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/css/commons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news" />
+    <entry file="file://$PROJECT_DIR$/change_chouti/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/spider_bugInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/utils/excel_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="73" column="60" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change_chouti/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/news_spider/toutiaoSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/spider/handSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testForum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="213" column="48" selection-start-line="213" selection-start-column="48" selection-end-line="213" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b0734e0f-845b-45a8-a9de-008ca8e3c660/schema/main/table/web_news">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
