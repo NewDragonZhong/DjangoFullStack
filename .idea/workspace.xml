@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7367b0aa-1f08-418c-aabd-43c8a24b297a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/change_chouti.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/3a86dfbb-17b1-4659-b3f2-fa5d71bbfebc/_metadata_/metadata_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/_metadata_/metadata_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/5df68e36-0938-42fb-8831-bf79c6315598/storage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/_metadata_/metadata_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/78716a6f-703f-4fdc-b831-65ffad2df473/storage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/_metadata_/metadata_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/a25bb65a-4e5c-4312-9b00-92ca18165982/storage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/b0734e0f-845b-45a8-a9de-008ca8e3c660.corrupted.20190706-100955.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/b0734e0f-845b-45a8-a9de-008ca8e3c660.corrupted.20190713-091206.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/b0734e0f-845b-45a8-a9de-008ca8e3c660.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/b0734e0f-845b-45a8-a9de-008ca8e3c660/storage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/dataSources/b0734e0f-845b-45a8-a9de-008ca8e3c660/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/Monaco.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/commons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/core/request_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/form/fields.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/form/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/session/session.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/uimethods.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/check_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/create_word.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/decrator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/excel_analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/mysql_bugInfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/pager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/perTesting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/servers_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/backend/utils/spider_bugInfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/change_chouti/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/change_chouti/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/change_chouti/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/change_chouti/urls_bak.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/change_chouti/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/bootstrap-3.3.7-dist/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/css/commons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/bottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/cent_secant_4_1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/icon_18_118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/loadinfo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/loading_32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/pinglun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/pinglun_line.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/pinglun_loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/system_env.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/images/tip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/_testForum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/_testPerformance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/_testReport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/jquery-2.1.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/plugins/tab-menu-box/tab.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/statics/upload/c26af55f6ff2ccf2019c5a0a255f9700" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/TR_templates/template.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/TR_templates/test_pro2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/_layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/my_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/testForum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/testPerformance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/templates/testReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/forms/account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/forms/home.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0002_auto_20171205_2017.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0003_auto_20171205_2024.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0004_auto_20171205_2026.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0005_auto_20180529_1333.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0006_auto_20180529_1334.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0007_auto_20180529_1351.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0008_auto_20180529_1401.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0009_auto_20180529_1415.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0010_auto_20180529_1417.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0011_reporttemplate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0012_remove_reporttemplate_bug_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0013_spidertable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0014_auto_20181114_1334.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0015_auto_20181127_2311.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0016_remove_reportinfo_env_img.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0017_auto_20181128_2130.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0018_remove_spiderproduct_user_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0019_auto_20181203_1004.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0020_auto_20181203_1028.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0021_reportinfo_testconclusion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0022_modalinfo_tt_con.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0023_remove_modalinfo_func_lis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0024_reportinfo_emaillist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0025_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0026_auto_20190522_1452.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0027_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0028_auto_20190523_0830.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0029_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0030_auto_20190523_1015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0031_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0032_auto_20190528_1359.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0033_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0034_auto_20190529_1449.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0035_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0036_auto_20190529_1522.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0037_auto_20190529_1523.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0038_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0039_auto_20190529_1525.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0040_auto_20190531_1414.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0041_auto_20190605_1111.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0042_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0043_auto_20190605_1436.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0044_auto_20190606_0937.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0045_pertestingtable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0046_pertestingserverstable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0047_auto_20190612_0943.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0048_auto_20190612_1317.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0049_pertestingserverstable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0050_auto_20190612_1400.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0051_pertestingserverstable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0052_auto_20190612_1421.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0053_auto_20190612_1441.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0054_userfilespaths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0055_auto_20190711_0954.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0056_auto_20190711_0956.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/0057_auto_20190712_1554.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/templatetags/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/templatetags/index_username.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/views/account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/views/home.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BBD_Test_Department/web/views/tools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="585" />
+    <option name="y" value="239" />
+    <option name="width" value="1771" />
+    <option name="height" value="927" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PythonFullStack/BBD_Test_Department" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7367b0aa-1f08-418c-aabd-43c8a24b297a" name="Default Changelist" comment="" />
+      <created>1563152477607</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563152477607</updated>
+      <workItem from="1563152481014" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="585" y="239" width="1771" height="927" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24956165" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
