@@ -1,0 +1,261 @@
+{% extends "_layout.html" %}
+{% load index_username %}
+
+{% block css %}
+    <link rel="stylesheet" href="/statics/plugins/tab-menu-box/tab.css" />
+{% endblock %}
+    <style>
+        .pagination{
+            margin-left: 20px;
+        }
+        .com{
+            margin-left: 20px;
+        }
+    </style>
+
+
+
+{% block body %}
+    <div style="background-color: #eee;">
+        <div class="w body-content">
+            <div class="clearfix">
+                <div class="content-l" >
+                    <div class="nav-top-area">
+                        <div class="child-nav">
+                            <a href="/r/pic/hot/1" hidefocus="false" class="icons active hotbtn" id="hotts-nav-btn">圈内</a>
+                            <a href="/r/pic/new/1" hidefocus="false" class="newbtn" id="newest-nav-btn">圈外</a>
+                        </div>
+
+                        {% if userinfo.is_login %}
+                            <a href="javascript:void(0);" class="publish-btn" id="publishBtn">
+                                <span class="ico n1"></span><span class="n2">发布</span>
+                            </a>
+                        {% else %}
+                            <a href="javascript:void(0);" class="publish-btn" id="publishBtn">
+                                <span class="ico n1"></span><span class="n2">发布</span>
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="content-list" id="content_list">
+                        {% for item in news_list %}
+							
+                            <div class="item">
+
+                                <div class="news-pic">
+                                    <img src={{ item.img_href }} alt={{ item.explain }} style="display: inline;">
+                                </div>
+
+                                <div class="null-item"></div>
+
+                                <div class="news-content">
+                                    <div class="part1">
+                                        <a href={{item.url}} class="show-content" target="_blank">{{item.title}}</a>
+                                        <span class="content-source">-{{ item.domain }}</span>
+                                        <a href="/r/news/hot/1" class="n2">
+                                            <span class="content-kind"></span>
+                                        </a>
+                                    </div>
+                                    <div class="area-summary">
+                                        <a class="summary" href="{{ item.url }}" target="_blank">{{item.summary}}</a>
+                                    </div>
+                                    <div class="part2">
+                                        <a href="javascript:void(0);" class="digg-a" title="推荐" onclick="DoFavor(this,{{item.id}});">
+                                            {% if item.9 %}
+                                                <span class="hand-icon icon-digg active"></span>
+                                            {% else %}
+                                                <span class="hand-icon icon-digg"></span>
+                                            {% endif %}
+                                            <b id="favor_count_{{item.id}}">{{item.favor_count}}</b>
+                                        </a>
+                                        <a href="javascript:void(0);" class="discus-a" title="评论" onclick="ToggleCommentArea({{item.id}});">
+                                            <span class="hand-icon icon-discus"></span>
+                                            <b id="comment_count_{{item.id}}">{{item.comment_count}}</b>
+                                        </a>
+                                        <a href="javascript:void(0);" class="collect-a" >
+                                            <span class="hand-icon icon-collect"></span><b>私藏</b>
+                                        </a>
+                                        <a href="https://dig.chouti.com" class="user-a">
+                                            <span>
+                                                <img style="margin-bottom: 9px;width: 20px;height: 20px;border: 0px solid #cccccc" src={{ item.icon }}>
+                                            </span>
+                                            <b>{{ item.explain }}</b>
+                                        </a>
+										
+										
+                                        <span class="time-into">
+                                            <a class="time-a" href="#" target="_blank">
+                                                <b>{{ item.ctime }}</b>
+                                            </a>
+                                            <i>入热榜</i>
+                                        </span>
+
+                                    </div>
+                                    <!-- 评论区域 -->
+                                    <div id="comment_area_{{item.id}}" class="comment-box-area hide" >
+                                        <div class="pinglun arrow" id="comt-arrow-8118680"></div>
+                                        <a class="pinglun close-comt" title="关闭" href="javascript:void(0);" onclick="HideCommentArea({{item.id}});"></a>
+
+                                        <div class="corner comment-box clearfix" >
+
+                                            <div class="loading-ico loading-ico-top"  style="margin-left:230px;">加载中，请稍候...</div>
+
+                                            <div class="comment-box-top hide" >
+                                                <div class="tip-1">最热评论(<span>{{item.comment_count}}</span>)</div>
+                                                <div class="tip-2">
+                                                    <a href="#" target="_blank">
+                                                        <em class="pinglun em1"></em>
+                                                        <span>去评论页面</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <ul id="comment_list_{{item.id}}" class="filetree comment-list-top-2 treeview hide">
+
+                                            </ul>
+
+                                            <div class="huifu-top-box hide">
+                                                <div class="box-l txt-input-area-div-top corner no-corner-bottom">
+                                                    <div class="lab-comment-top">回复  <span id="reply_id_{{item.id}}"></span>:</div>
+                                                    <!-- 针对谣言文本输入框无效 -->
+                                                        <textarea id="comment_content_{{item.id}}" maxlength="150" name="txt-huifu-top" class="txt-huifu txt-huifu-top"></textarea>
+                                                </div>
+                                                <div class="box-r">
+                                                    <a href="javascript:void(0);" class="pub-icons add-pub-btn add-pub-btn-unvalid" onclick="DoComment({{item.id}})">评论</a>
+                                                    <a href="javascript:void(0);" class="loading-ico loading-ico-top pub-loading-top hide">发布中...</a>
+                                                </div>
+                                            </div>
+                                            <div class="tip-3 ">
+                                                <a href="javascript:void(0);" class="hiddenCom-Btn" onclick="HideCommentArea({{item.id}});">
+                                                    <em class="pinglun em2"></em>
+                                                    <span>收起</span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {{ pagin.string_pager }}
+
+                    </div>
+                </div>
+
+
+                <div class="content-r">
+
+                </div>
+            </div>
+    </div>
+
+
+    <div id="publishDialog" class="dialog hide">
+        <div class="dialog-title-bar">
+            <div class="dialog-title">
+                <span>分享新发现</span>
+            </div>
+            <div class="dialog-close" onclick="CloseDialog('#publishDialog');">X</div>
+        </div>
+        <div class="dialog-content">
+            <div class="tab-menu-box">
+                <div class="menu">
+                    <ul id="tab-menu-title">
+                        <li content-to="1" class="current">链接</li>
+                        <li content-to="2" >文字</li>
+                        <li content-to="3" >图片</li>
+                    </ul>
+                </div>
+
+                <div id="tab-menu-body" class="content">
+                    <div content="1" class="publish-content clearfix">
+                        <div class="tab-alt">添加链接</div>
+                        <div class="f1 clearfix">
+                            <div class="left"><input type="text"  name="url" /></div>
+                            <div class="right"><a href="javascript:void(0);" id="news_headline">获取标题</a></div>
+                        </div>
+                        <div class="tab-alt">标题</div>
+                        <div class="f2">
+
+                            <input type="text" name="title" />
+                        </div>
+                        <div class="tab-alt">添加摘要（选填）</div>
+                        <div class="f2">
+                            <textarea name="content"></textarea>
+                        </div>
+                        <div class="f3">
+                            <span>发布到：</span>
+                            <div class="news-type" style="display: inline-block">
+                                <a value="1" class="active">圈外</a>
+                                <a value="2" >圈内</a>
+                            </div>
+                        </div>
+                        <div class="f4">
+                            <a class="submit right" id="submit_link">提交</a>
+                            <span class="error-msg right"></span>
+                        </div>
+                    </div>
+                    <div content="2" class="publish-content clearfix hide">
+                        <div class="f2">
+                            <textarea name="title"></textarea>
+                        </div>
+                        <div class="f3">
+
+                            <span>发布到：</span>
+                            <div class="news-type" style="display: inline-block">
+                                <a value="1" class="active">圈外</a>
+                                <a value="2" >圈内</a>
+                            </div>
+                        </div>
+                        <div class="f4">
+                            <a class="submit right" id="submit_text">提交</a>
+                            <span class="error-msg right"></span>
+                        </div>
+                    </div>
+                    <div content="3" class="publish-content clearfix hide">
+                        <div class="tab-alt">添加图片</div>
+                        <div class="f5">
+                            <form style="display: inline-block" id="upload_img_form" name="form" action="/upload_image/" method="POST"  enctype="multipart/form-data" >
+                                <a id="fakeFile" class="fake-file">
+                                    <span>上传图片</span>
+                                    <input type="file" name="img" onchange="UploadImage(this);"/>
+                                    <input type="text" name="url" class="hide" />
+                                </a>
+                                <iframe id='upload_img_iframe' name='upload_img_iframe' src=""  class="hide"></iframe>
+                            </form>
+                            <a class="re-upload hide fake-file" id="reUploadImage" onclick="ReUploadImage(this);">重新上传</a>
+                        </div>
+                        <div class="f2" style="margin-top: 8px">
+                            <textarea name="title" placeholder="请输入描述"></textarea>
+                        </div>
+                        <div class="f3">
+                            <span>发布到：</span>
+                            <div class="news-type" style="display: inline-block">
+                                <a value="1" class="active">圈内</a>
+                                <a value="2" >圈外</a>
+                            </div>
+                        </div>
+                        <div class="f4">
+                            <a class="submit right" id="submit_img">提交</a>
+                            <span class="error-msg right"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript" src="/statics/js/_testForum.js"></script>
+{% endblock %}
