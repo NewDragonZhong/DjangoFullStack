@@ -1,6 +1,6 @@
 # PythonFullStack
 python(版本 3.6.1)
-需要安装一些 依赖的包：
+需要安装一些 依赖的包：(python_warehouse.txt)
   -- import requests
   -- from lxml import etree
   -- PIL -> pillow
@@ -9,7 +9,7 @@ python(版本 3.6.1)
   -- redis
   -- xlrd
   -- pandas
-  -- 大概就这些，如果不能运行 记住pip install xxx 
+  -- 直接使用 pip install -r python_warehouse.txt
  Django版本: Django2.1.3
  自定义样式文件路径：	.\TestPlatform\statics\css\commons.css
  前端js框架:        	jquery-2.1.4.min.js
