@@ -26,7 +26,7 @@ class MysqlBugInfo:
 
 
     def product_info(self):
-        db = ps.connect(host='127.0.0.1', port=7575, user="root", passwd="123456", db='zentao', charset='utf8')
+        db = ps.connect(host='10.28.200.161', port=3306, user="zentao", passwd="123456", db='zentao', charset='utf8')
         cursor_p = db.cursor()  # 获取操作游标
         cursor_p.execute(self.sqlP) # 执行sql语句
 
@@ -41,7 +41,7 @@ class MysqlBugInfo:
 
 
     def bug_info(self):
-        db = ps.connect(host='127.0.0.1', port=7575, user="root", passwd="123456", db='zentao', charset='utf8')
+        db = ps.connect(host='10.28.200.161', port=3306, user="zentao", passwd="123456", db='zentao', charset='utf8')
         cursor_p = db.cursor()  # 获取操作游标
         cursor_p.execute(self.sqlB)  # 执行sql语句
 

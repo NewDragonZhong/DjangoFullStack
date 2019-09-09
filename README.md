@@ -1,4 +1,5 @@
 # PythonFullStack
+--最近更新日期：2019.09.09
 python(版本 3.6.1)
 需要安装一些 依赖的包：(python_warehouse.txt)
   -- import requests

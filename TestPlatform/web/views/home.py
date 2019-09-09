@@ -53,6 +53,16 @@ def testPerformance(request):
     return render(request,'testPerformance.html',{})
 
 
+# 自动化测试主函数
+def testauto(request):
+    """
+    将前端发来的数据进行处理，并且返回给前端需要的数据
+    :param request:
+    :return:
+    """
+
+    return render(request,'testauto.html',{})
+
 
 
 # 报告页面 主函数

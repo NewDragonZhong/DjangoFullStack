@@ -1,0 +1,73 @@
+{% extends "_layout.html" %}
+{% load index_username %}
+
+{% block css %}{% endblock %}
+
+
+{% block body %}
+<div class="pg-body">
+    <div style="background-color: #eee;">
+        <div class="w body-content">
+            <div class="clearfix">
+                    <div class="content-l">
+                        <div id="user_interface">
+                            <iframe id="mainContent" width="100%" height="713 px"></iframe>
+                        </div>
+                    </div>
+
+
+                    <div class="content-r">
+                        <div class="form-group form-group-div">
+                            <div class="nav-top-area">
+                                <div class="child-nav">
+                                </div>
+                            </div>
+                            <div class="nav-form-area">
+                                <div id="contentOne">
+                                     <select class="form-control form_info" style="height: 33px;width: 244px;margin-bottom: 15px;" name="reqMethods">
+                                            <option value="get">接口自动化</option>
+                                            <option value="post">UI自动化</option>
+                                        </select>
+
+                                    <div class="form-group form-group-div-per">
+                                        <label for="exampleInputName2">通关口令:</label>
+                                        <textarea class="form-control form_info" name="tokenID" placeholder='类似于token 的身份认证'></textarea>
+                                    </div>
+                                    {% if request.session.is_login %}
+                                        <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
+                                            <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="{% url 'excel_download' %}"> 数据信息_模板</a>
+                                        </div>
+                                        <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
+                                            <input type="file" name="excel_data" id="excel_upload">
+                                            <p></p>
+                                            <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" onclick="ExcelUpload()"> 数据信息_内容</a>
+                                        </div>
+                                    {% else %}
+                                        <div class="excel_download" style="margin-bottom: 30px;margin-left: 42px;">
+                                            <a type="button" class="btn btn-success glyphicon glyphicon-floppy-save" href="javascript:void(0);"> 数据信息_模板</a>
+                                        </div>
+                                        <div class="excel_upload" style="margin-bottom: 5px;margin-left: 42px;">
+                                            <input type="file" name="excel_data" id="excel_upload">
+                                            <p></p>
+                                            <a type="button" class="btn btn-primary glyphicon glyphicon-level-up" href="javascript:void(0);"> 数据信息_内容</a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="form-group-submit">
+                                <button type="button" class="btn btn-success glyphicon glyphicon-play-circle"  id="SendRequests" style="width: 100px;margin-left: 20px">_开始运行 </button>
+                                <button type="button" class="btn btn glyphicon glyphicon-erase btn-info"  id="ClearData" style="width: 100px;margin-left: 20px">_清除数据 </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block javascript %}
+    <script src="/statics/js/echarts.js"></script>
+    <script type="text/javascript" src="/statics/js/_testauto.js"></script>
+{% endblock %}

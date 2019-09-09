@@ -52,4 +52,7 @@ urlpatterns = [
     url(r'^excel_download/$', account.excel_download, name='excel_download'),
     url(r'^upload_customFile/$', account.custom_file_upload),
 
+    # -----***----- 自动化测试
+    url(r'^auto/$',home.testauto),
+
 ]
